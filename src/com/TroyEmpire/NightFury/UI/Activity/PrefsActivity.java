@@ -2,6 +2,7 @@ package com.TroyEmpire.NightFury.UI.Activity;
 
 import java.util.ArrayList;
 
+import com.TroyEmpire.NightFury.Constant.Constant;
 import com.TroyEmpire.NightFury.Entity.PhoneModeTimeUnit;
 import com.TroyEmpire.NightFury.Enum.JwcAction;
 import com.TroyEmpire.NightFury.Ghost.IService.IInitiateDataService;
@@ -13,7 +14,10 @@ import com.TroyEmpire.NightFury.Ghost.Service.SmartPhoneViberateService;
 import com.TroyEmpire.NightFury.UI.Fragment.UserJwcInfoDialogFragment;
 import com.TroyEmpire.NightFury.Util.Util;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
+import android.content.SharedPreferences.Editor;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
 import android.util.Log;
@@ -88,6 +92,8 @@ public class PrefsActivity extends FragmentActivity implements OnClickListener {
 	@Override
 	public void onClick(View v) {
 		UserJwcInfoDialogFragment userInfoDialog;
+		SharedPreferences smartPhoneStatus = this.getSharedPreferences(
+				Constant.SHARED_PREFERENCE_NIGHT_FURY, Context.MODE_PRIVATE);
 		switch (v.getId()) {
 		case R.id.id_enable_smart_viberate_checkbox:
 			Log.i(TAG, "切换智能真机系统状态");
@@ -97,6 +103,9 @@ public class PrefsActivity extends FragmentActivity implements OnClickListener {
 						.startSmartPhoneViberateService(iScheduleService
 								.getDayCoursePhoneModeTimeUnits(Util
 										.getWeekday()));
+				Editor editor = smartPhoneStatus.edit();
+				editor.putBoolean(Constant.SMERT_PHONE_VIBERATE_STATUS, true);
+				editor.commit();
 				Toast.makeText(this,
 						"打开智能振机系统",
 						Toast.LENGTH_SHORT).show();
@@ -106,6 +115,9 @@ public class PrefsActivity extends FragmentActivity implements OnClickListener {
 				Toast.makeText(this,
 						"关闭智能振机系统",
 						Toast.LENGTH_SHORT).show();
+				Editor editor = smartPhoneStatus.edit();
+				editor.putBoolean(Constant.SMERT_PHONE_VIBERATE_STATUS, false);
+				editor.commit();
 			}
 			break;
 

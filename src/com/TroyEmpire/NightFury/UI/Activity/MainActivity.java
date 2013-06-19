@@ -10,13 +10,19 @@ import org.apache.commons.io.IOUtils;
 
 import com.TroyEmpire.NightFury.Constant.Constant;
 import com.TroyEmpire.NightFury.Ghost.IService.IInitiateDataService;
+import com.TroyEmpire.NightFury.Ghost.IService.IScheduleService;
+import com.TroyEmpire.NightFury.Ghost.IService.ISmartPhoneViberateService;
 import com.TroyEmpire.NightFury.Ghost.Service.InitiateDataService;
+import com.TroyEmpire.NightFury.Ghost.Service.ScheduleService;
+import com.TroyEmpire.NightFury.Ghost.Service.SmartPhoneViberateService;
 import com.TroyEmpire.NightFury.Util.NightFuryCommons;
 import com.TroyEmpire.NightFury.Util.Util;
 
 import android.app.Activity;
 import android.app.ProgressDialog;
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.util.Log;
@@ -30,6 +36,8 @@ public class MainActivity extends Activity implements OnClickListener {
 	private static final String TAG = "com.TroyEmpire.NightFury.UI.Activity";
 	// private GridView mainFuncGridView;
 	private IInitiateDataService initDataService = new InitiateDataService();
+	private ISmartPhoneViberateService smartPhoneViberateService;
+	private IScheduleService iScheduleService;
 
 	// 用于测试服务是否打开的定时器
 
@@ -45,6 +53,9 @@ public class MainActivity extends Activity implements OnClickListener {
 
 		// 初始化各个按钮，并设置点击事件
 		initViews();
+		smartPhoneViberateService = new SmartPhoneViberateService(this);
+		iScheduleService = new ScheduleService(this);
+		checkSmartPhoneViberateStatus();
 	}
 
 	private void initViews() {
@@ -224,6 +235,22 @@ public class MainActivity extends Activity implements OnClickListener {
 			IOUtils.copy(in_yellowPage, out_yellowPage);
 		} catch (Exception e) {
 			e.printStackTrace();
+		}
+	}
+	
+	
+	private void checkSmartPhoneViberateStatus(){
+		SharedPreferences smartPhoneStatus = this.getSharedPreferences(
+				Constant.SHARED_PREFERENCE_NIGHT_FURY, Context.MODE_PRIVATE);
+		boolean status = smartPhoneStatus.getBoolean(Constant.SMERT_PHONE_VIBERATE_STATUS, true);
+		if(status) {
+			
+			// restart the service
+			smartPhoneViberateService.stopSmartPhoneViberateService();
+			smartPhoneViberateService
+			.startSmartPhoneViberateService(iScheduleService
+					.getDayCoursePhoneModeTimeUnits(Util
+							.getWeekday()));
 		}
 	}
 

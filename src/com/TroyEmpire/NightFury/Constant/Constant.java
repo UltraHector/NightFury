@@ -70,7 +70,6 @@ public class Constant {
 
 	// SharedPreferences file names
 	public static final String SHARED_PREFERENCE_NIGHT_FURY = "com.TroyEmpire.NightFury";
-	public static final String FIRST_TIME_TO_USE_KEY = "firstTimeToUse";
 	public static final String SHARED_PREFERENCE_USER_JWC_INFO = "com.TroyEmpire.NightFury.userJwcInfo";
 	public static final String SHARED_PREFERENCE_SCHEDULE = "com.TroyEmpire.NightFury.formattedSchedule";
 	public static final String SHARED_PREFERENCE_MAP_HISTORY_FILE = "com.TroyEmpire.NightFury.map";
@@ -81,6 +80,8 @@ public class Constant {
 	// SharedPreferences key-value paris
 	public static final String USER_JWC_ACCOUNT_NUMBER = "accountNumber";
 	public static final String USER_JWC_PASSWORD = "password";
+	public static final String FIRST_TIME_TO_USE_KEY = "firstTimeToUse";
+	public static final String SMERT_PHONE_VIBERATE_STATUS = "SMERT_PHONE_VIBERATE_STATUS";
 
 	// 地图常量
 	public static final String MAP_LIST_HISTORY_SIZE = "10";
