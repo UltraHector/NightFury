@@ -32,6 +32,8 @@ ul#list-nav li a {
 			onclick="switchToAboutMe()">关于Hebe</a></li>
 		<li><a id="manualLink" style="background: green; color: #eee;"
 			href="#" onclick="switchToManual()">使用手册</a></li>
+		<li><a id="callingLink" style="background: green; color: #eee;"
+			href="#" onclick="switchToCalling()">召唤队友</a></li>
 		<li><a id="moreFuncLink" style="background: green; color: #eee;"
 			href="#" onclick="switchToMoreFunc()">更多精彩</a></li>
 	</ul>
@@ -96,57 +98,104 @@ ul#list-nav li a {
 		<p>热情的我们服务热心的你，Hebe作为高融合的校园软件，将最大力度的融合一切能为您服务的
 			功能。<b>如果您有更多的Idea，别忘了告诉我们啊。</b>掌上暨大交流群: 132526208. 或许您今日的想法将会是掌上暨大明天的一个现实。</p>
 	</div>
+	<div id="calling" style="display: none;">
+	   <p>Hebe V1.0开发队员大多即将走出暨大的校园，但是Hebe后期版本还有很多的功能没有实现。所以我们真诚邀请暨大的同学加入我们的开发团队，并接手Hebe的后期开发，同时我们将义务提供最大的支持和帮助。</p>
+	   <ul style="list-style-type: circle;">
+		  <li><h4>All what we need is the Passion</h4></li>
+		</ul>
+	</div>
 	<script>
 		function switchToAboutMe() {
 			var aboutHebe = document.getElementById("aboutHebe");
 			var manual = document.getElementById("manual");
 			var moreFunc = document.getElementById("moreFunc");
+			var calling = document.getElementById("calling");
 			var aboutMeLink = document.getElementById("aboutHebeLink");
 			var manualLink = document.getElementById("manualLink");
 			var moreFuncLink = document.getElementById("moreFuncLink");
+			var callingLink = document.getElementById("callingLink");
 			aboutHebe.style.display = 'block';
 			manual.style.display = 'none';
 			moreFunc.style.display = 'none';
+			calling.style.display = 'none';
+			
 			aboutMeLink.style.color = 'black';
 			aboutMeLink.style.background = 'white';
 			manualLink.style.color = '#eee';
 			manualLink.style.background = 'green';
 			moreFuncLink.style.color = '#eee';
 			moreFuncLink.style.background = 'green';
+			callingLink.style.color = '#eee';
+			callingLink.style.background = 'green';
 		}
 		function switchToMoreFunc() {
 			var aboutHebe = document.getElementById("aboutHebe");
 			var manual = document.getElementById("manual");
 			var moreFunc = document.getElementById("moreFunc");
+			var calling = document.getElementById("calling");
 			var aboutMeLink = document.getElementById("aboutHebeLink");
 			var manualLink = document.getElementById("manualLink");
 			var moreFuncLink = document.getElementById("moreFuncLink");
+			var callingLink = document.getElementById("callingLink");
 			aboutHebe.style.display = 'none';
 			manual.style.display = 'none';
 			moreFunc.style.display = 'block';
+			calling.style.display = 'none';
 			aboutMeLink.style.color = "#eee";
 			aboutMeLink.style.background = 'green';
 			manualLink.style.color = '#eee';
 			manualLink.style.background = 'green';
 			moreFuncLink.style.color = 'black';
 			moreFuncLink.style.background = 'white';
+			callingLink.style.color = '#eee';
+			callingLink.style.background = 'green';
 		}
 		function switchToManual() {
 			var aboutHebe = document.getElementById("aboutHebe");
 			var manual = document.getElementById("manual");
 			var moreFunc = document.getElementById("moreFunc");
+			var calling = document.getElementById("calling");
 			var aboutMeLink = document.getElementById("aboutHebeLink");
 			var manualLink = document.getElementById("manualLink");
 			var moreFuncLink = document.getElementById("moreFuncLink");
+			var callingLink = document.getElementById("callingLink");
 			aboutHebe.style.display = 'none';
 			manual.style.display = 'block';
 			moreFunc.style.display = 'none';
+			calling.style.display = 'none';
+			
 			aboutMeLink.style.color = "#eee";
 			aboutMeLink.style.background = 'green';
 			manualLink.style.color = 'black';
 			manualLink.style.background = 'white';
 			moreFuncLink.style.color = '#eee';
 			moreFuncLink.style.background = 'green';
+			callingLink.style.color = '#eee';
+			callingLink.style.background = 'green';
+		}
+		
+		function switchToCalling(){
+			var aboutHebe = document.getElementById("aboutHebe");
+			var manual = document.getElementById("manual");
+			var moreFunc = document.getElementById("moreFunc");
+			var calling = document.getElementById("calling");
+			var aboutMeLink = document.getElementById("aboutHebeLink");
+			var manualLink = document.getElementById("manualLink");
+			var moreFuncLink = document.getElementById("moreFuncLink");
+			var callingLink = document.getElementById("callingLink");
+			aboutHebe.style.display = 'none';
+			manual.style.display = 'none';
+			moreFunc.style.display = 'none';
+			calling.style.display = 'block';
+			
+			aboutMeLink.style.color = "#eee";
+			aboutMeLink.style.background = 'green';
+			manualLink.style.color = '#eee';
+			manualLink.style.background = 'green';
+			moreFuncLink.style.color = '#eee';
+			moreFuncLink.style.background = 'green';
+			callingLink.style.color = 'black';
+			callingLink.style.background = 'white';
 		}
 	</script>
 <body>
