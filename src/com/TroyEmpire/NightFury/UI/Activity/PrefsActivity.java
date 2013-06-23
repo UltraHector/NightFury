@@ -65,10 +65,6 @@ public class PrefsActivity extends FragmentActivity implements OnClickListener {
 				.isSVSIsOn());
 	}
 
-	// 实现标题栏的Home键
-	public void btnHomeOnClick(View v) {
-		startActivity(new Intent(this, MainActivity.class));
-	}
 
 	// 实现标题栏的返回键
 	public void btnBackOnClick(View v) {

@@ -19,6 +19,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.TextView;
 
 public class XiaoYuanDTActivity extends Activity implements OnClickListener {
@@ -44,7 +45,7 @@ public class XiaoYuanDTActivity extends Activity implements OnClickListener {
 
 //		ImageButton btnLocation = (ImageButton) findViewById(R.id.xiaoyuandt_location_btn);
 //		btnLocation.setOnClickListener(this);
-		Button btnPath = (Button) findViewById(R.id.xiaoyuandt_path_btn);
+		ImageButton btnPath = (ImageButton) findViewById(R.id.xiaoyuandt_path_btn);
 		btnPath.setOnClickListener(this);
 //		Button btnSearch = (Button) findViewById(R.id.xiaoyuandt_search_btn);
 //		btnSearch.setOnClickListener(this);
@@ -61,10 +62,6 @@ public class XiaoYuanDTActivity extends Activity implements OnClickListener {
 	}
 
 	
-	public void btnHomeOnClick(View v) {
-		startActivity(new Intent(this, MainActivity.class));
-	}
-
 	
 	public void btnBackOnClick(View v) {
 		finish();

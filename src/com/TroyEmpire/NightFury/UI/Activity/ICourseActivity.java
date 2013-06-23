@@ -157,9 +157,9 @@ public class ICourseActivity extends TabActivity implements
 	}
 
 
-	// 实现标题栏的Home键
-	public void btnHomeOnClick(View v) {
-		startActivity(new Intent(this, MainActivity.class));
+	// 实现标题栏的右键
+	public void btnRigthOnClick(View v) {
+		startActivity(new Intent(this, PrefsActivity.class));
 	}
 
 	// 实现标题栏的返回键

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
  <selector xmlns:android="http://schemas.android.com/apk/res/android">
      <item android:state_pressed="true"
-           android:drawable="@drawable/btn_path_pressed" /> <!-- pressed -->
+           android:drawable="@drawable/xiaoyuandt_path_pressed" /> <!-- pressed -->
      <item android:state_focused="true"
-           android:drawable="@drawable/btn_path_pressed" /> <!-- focused -->
-     <item android:drawable="@drawable/btn_path_normal" /> <!-- default -->
+           android:drawable="@drawable/xiaoyuandt_path_pressed" /> <!-- focused -->
+     <item android:drawable="@drawable/xiaoyuandt_path_normal" /> <!-- default -->
  </selector>

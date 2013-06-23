@@ -197,7 +197,7 @@
             android:layout_height="40dp"
             android:background="@drawable/transparent_bg"
             android:contentDescription="@string/image_description"
-            android:src="@drawable/sys_setting" />
+            android:src="@drawable/selector_settings_btn" />
 
         <ImageButton
             android:id="@+id/sys_helper"
