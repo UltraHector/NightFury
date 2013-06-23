@@ -1,9 +1,6 @@
 package com.TroyEmpire.NightFury.UI.Activity;
 
-import java.util.ArrayList;
-
 import com.TroyEmpire.NightFury.Constant.Constant;
-import com.TroyEmpire.NightFury.Entity.PhoneModeTimeUnit;
 import com.TroyEmpire.NightFury.Enum.JwcAction;
 import com.TroyEmpire.NightFury.Ghost.IService.IInitiateDataService;
 import com.TroyEmpire.NightFury.Ghost.IService.IScheduleService;
@@ -14,10 +11,7 @@ import com.TroyEmpire.NightFury.Ghost.Service.SmartPhoneViberateService;
 import com.TroyEmpire.NightFury.UI.Fragment.UserJwcInfoDialogFragment;
 import com.TroyEmpire.NightFury.Util.Util;
 
-import android.content.Context;
 import android.content.Intent;
-import android.content.SharedPreferences;
-import android.content.SharedPreferences.Editor;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
 import android.util.Log;
@@ -47,8 +41,8 @@ public class PrefsActivity extends FragmentActivity implements OnClickListener {
 		TextView enableSmartViberateTextView = (TextView) findViewById(R.id.id_enable_smart_viberate_textview);
 		TextView updateCourseScheduleTextView = (TextView) findViewById(R.id.id_update_course_schedule);
 		TextView updateExamScheduleTextView = (TextView) findViewById(R.id.id_update_exam_schedule);
-		TextView aboutusTextView = (TextView)findViewById(R.id.aboutus_tv);
-		TextView shareTextView = (TextView)findViewById(R.id.setting_share_tv);
+		TextView aboutusTextView = (TextView) findViewById(R.id.aboutus_tv);
+		TextView shareTextView = (TextView) findViewById(R.id.setting_share_tv);
 		// TextView updateMapDataTextView = (TextView)
 		// findViewById(R.id.id_update_map_data);
 		// TextView updateRestaurantDataTextView = (TextView)
@@ -67,26 +61,8 @@ public class PrefsActivity extends FragmentActivity implements OnClickListener {
 		// 初始化智能振机服务
 		iScheduleService = new ScheduleService(this);
 		smartPhoneViberateService = new SmartPhoneViberateService(this);
-	}
-
-	// the method define below are used for testing
-	private ArrayList<PhoneModeTimeUnit> getTestDayDate() {
-		ArrayList<PhoneModeTimeUnit> timeOfClasses = new ArrayList<PhoneModeTimeUnit>();
-		PhoneModeTimeUnit time;
-		int[] startHourOfClass = new int[] { 21, 21, 21 };
-		int[] startMinuteOfClass = new int[] { 47, 49, 22 };
-
-		int[] endHourOfClass = new int[] { 21, 21, 21 };
-		int[] endMinuteOfClass = new int[] { 48, 50, 23 };
-		for (int i = 0; i < startHourOfClass.length; i++) {
-			time = new PhoneModeTimeUnit();
-			time.setStartHour(startHourOfClass[i]);
-			time.setStartMinute(startMinuteOfClass[i]);
-			time.setEndHour(endHourOfClass[i]);
-			time.setEndMinute(endMinuteOfClass[i]);
-			timeOfClasses.add(time);
-		}
-		return timeOfClasses;
+		enableSmartViberateBox.setChecked(smartPhoneViberateService
+				.isSVSIsOn());
 	}
 
 	// 实现标题栏的Home键
@@ -102,8 +78,7 @@ public class PrefsActivity extends FragmentActivity implements OnClickListener {
 	@Override
 	public void onClick(View v) {
 		UserJwcInfoDialogFragment userInfoDialog;
-		SharedPreferences smartPhoneStatus = this.getSharedPreferences(
-				Constant.SHARED_PREFERENCE_NIGHT_FURY, Context.MODE_PRIVATE);
+
 		switch (v.getId()) {
 		case R.id.id_enable_smart_viberate_checkbox:
 			Log.i(TAG, "切换智能真机系统状态");
@@ -113,16 +88,12 @@ public class PrefsActivity extends FragmentActivity implements OnClickListener {
 						.startSmartPhoneViberateService(iScheduleService
 								.getDayCoursePhoneModeTimeUnits(Util
 										.getWeekday()));
-				Editor editor = smartPhoneStatus.edit();
-				editor.putBoolean(Constant.SMERT_PHONE_VIBERATE_STATUS, true);
-				editor.commit();
+				smartPhoneViberateService.setWhetherSVSIsOn(true);
 				Toast.makeText(this, "打开智能振机系统", Toast.LENGTH_SHORT).show();
 			} else {
 				smartPhoneViberateService.stopSmartPhoneViberateService();
+				smartPhoneViberateService.setWhetherSVSIsOn(false);
 				Toast.makeText(this, "关闭智能振机系统", Toast.LENGTH_SHORT).show();
-				Editor editor = smartPhoneStatus.edit();
-				editor.putBoolean(Constant.SMERT_PHONE_VIBERATE_STATUS, false);
-				editor.commit();
 			}
 			break;
 
@@ -143,8 +114,8 @@ public class PrefsActivity extends FragmentActivity implements OnClickListener {
 			Intent it = new Intent(Intent.ACTION_SEND);
 			it.setType("text/plain");
 			it.putExtra(Intent.EXTRA_SUBJECT, "分享");
-			it.putExtra(Intent.EXTRA_TEXT,
-					Constant.SHARE_DESCRIPTION + Constant.DOWNLOAD_URL);
+			it.putExtra(Intent.EXTRA_TEXT, Constant.SHARE_DESCRIPTION
+					+ Constant.DOWNLOAD_URL);
 			startActivity(Intent.createChooser(it, "选择分享方式"));
 			break;
 		case R.id.aboutus_tv:

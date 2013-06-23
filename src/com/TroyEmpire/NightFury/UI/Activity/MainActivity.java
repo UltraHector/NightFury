@@ -1,9 +1,7 @@
 package com.TroyEmpire.NightFury.UI.Activity;
 
 import java.io.File;
-import java.io.FileInputStream;
 import java.io.FileOutputStream;
-import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
 import org.apache.commons.io.IOUtils;
@@ -15,14 +13,11 @@ import com.TroyEmpire.NightFury.Ghost.IService.ISmartPhoneViberateService;
 import com.TroyEmpire.NightFury.Ghost.Service.InitiateDataService;
 import com.TroyEmpire.NightFury.Ghost.Service.ScheduleService;
 import com.TroyEmpire.NightFury.Ghost.Service.SmartPhoneViberateService;
-import com.TroyEmpire.NightFury.Util.NightFuryCommons;
 import com.TroyEmpire.NightFury.Util.Util;
 
 import android.app.Activity;
 import android.app.ProgressDialog;
-import android.content.Context;
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.util.Log;
@@ -238,11 +233,10 @@ public class MainActivity extends Activity implements OnClickListener {
 		}
 	}
 	
-	
+	// 如果用户启用了SVS，重启软件的时候重新启动SVS，这样可以避免SVS意外停止的错误
 	private void checkSmartPhoneViberateStatus(){
-		SharedPreferences smartPhoneStatus = this.getSharedPreferences(
-				Constant.SHARED_PREFERENCE_NIGHT_FURY, Context.MODE_PRIVATE);
-		boolean status = smartPhoneStatus.getBoolean(Constant.SMERT_PHONE_VIBERATE_STATUS, true);
+		
+		boolean status = smartPhoneViberateService.isSVSIsOn();
 		if(status) {
 			
 			// restart the service

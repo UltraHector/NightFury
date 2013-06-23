@@ -9,6 +9,7 @@ import android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.content.SharedPreferences.Editor;
 import android.text.format.Time;
 import android.util.Log;
 
@@ -166,6 +167,22 @@ public class SmartPhoneViberateService implements ISmartPhoneViberateService {
 		PendingIntent pendingIntent = PendingIntent.getBroadcast(context, id,
 				intent, PendingIntent.FLAG_UPDATE_CURRENT);
 		return pendingIntent;
+	}
+
+	@Override
+	public void setWhetherSVSIsOn(boolean flag) {
+		SharedPreferences smartPhoneStatus = this.context.getSharedPreferences(
+				Constant.SHARED_PREFERENCE_NIGHT_FURY, Context.MODE_PRIVATE);
+		Editor editor = smartPhoneStatus.edit();
+		editor.putBoolean(Constant.SMERT_PHONE_VIBERATE_STATUS, flag);
+		editor.commit();
+	}
+
+	@Override
+	public boolean isSVSIsOn() {
+		SharedPreferences smartPhoneStatus = this.context.getSharedPreferences(
+				Constant.SHARED_PREFERENCE_NIGHT_FURY, Context.MODE_PRIVATE);
+		return smartPhoneStatus.getBoolean(Constant.SMERT_PHONE_VIBERATE_STATUS, false);
 	}
 
 }
