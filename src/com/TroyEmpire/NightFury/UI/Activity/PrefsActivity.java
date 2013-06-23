@@ -40,19 +40,29 @@ public class PrefsActivity extends FragmentActivity implements OnClickListener {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_settings);
 
+		// Set the title bar text as this activity label
+		TextView titleText = (TextView) findViewById(R.id.title_text);
+		titleText.setText(R.string.setting_label);
+
 		TextView enableSmartViberateTextView = (TextView) findViewById(R.id.id_enable_smart_viberate_textview);
 		TextView updateCourseScheduleTextView = (TextView) findViewById(R.id.id_update_course_schedule);
 		TextView updateExamScheduleTextView = (TextView) findViewById(R.id.id_update_exam_schedule);
-		TextView updateMapDataTextView = (TextView) findViewById(R.id.id_update_map_data);
-		TextView updateRestaurantDataTextView = (TextView) findViewById(R.id.id_update_restaurant_data);
+		TextView aboutusTextView = (TextView)findViewById(R.id.aboutus_tv);
+		TextView shareTextView = (TextView)findViewById(R.id.setting_share_tv);
+		// TextView updateMapDataTextView = (TextView)
+		// findViewById(R.id.id_update_map_data);
+		// TextView updateRestaurantDataTextView = (TextView)
+		// findViewById(R.id.id_update_restaurant_data);
 		CheckBox enableSmartViberateBox = (CheckBox) findViewById(R.id.id_enable_smart_viberate_checkbox);
 
 		enableSmartViberateTextView.setOnClickListener(this);
 		updateCourseScheduleTextView.setOnClickListener(this);
 		updateExamScheduleTextView.setOnClickListener(this);
-		updateMapDataTextView.setOnClickListener(this);
-		updateRestaurantDataTextView.setOnClickListener(this);
+		// updateMapDataTextView.setOnClickListener(this);
+		// updateRestaurantDataTextView.setOnClickListener(this);
 		enableSmartViberateBox.setOnClickListener(this);
+		aboutusTextView.setOnClickListener(this);
+		shareTextView.setOnClickListener(this);
 
 		// 初始化智能振机服务
 		iScheduleService = new ScheduleService(this);
@@ -98,7 +108,7 @@ public class PrefsActivity extends FragmentActivity implements OnClickListener {
 		case R.id.id_enable_smart_viberate_checkbox:
 			Log.i(TAG, "切换智能真机系统状态");
 			CheckBox enableSmartViberateBox = (CheckBox) findViewById(R.id.id_enable_smart_viberate_checkbox);
-			if (enableSmartViberateBox.isChecked() == true){
+			if (enableSmartViberateBox.isChecked() == true) {
 				smartPhoneViberateService
 						.startSmartPhoneViberateService(iScheduleService
 								.getDayCoursePhoneModeTimeUnits(Util
@@ -106,15 +116,10 @@ public class PrefsActivity extends FragmentActivity implements OnClickListener {
 				Editor editor = smartPhoneStatus.edit();
 				editor.putBoolean(Constant.SMERT_PHONE_VIBERATE_STATUS, true);
 				editor.commit();
-				Toast.makeText(this,
-						"打开智能振机系统",
-						Toast.LENGTH_SHORT).show();
-			}
-			else{
+				Toast.makeText(this, "打开智能振机系统", Toast.LENGTH_SHORT).show();
+			} else {
 				smartPhoneViberateService.stopSmartPhoneViberateService();
-				Toast.makeText(this,
-						"关闭智能振机系统",
-						Toast.LENGTH_SHORT).show();
+				Toast.makeText(this, "关闭智能振机系统", Toast.LENGTH_SHORT).show();
 				Editor editor = smartPhoneStatus.edit();
 				editor.putBoolean(Constant.SMERT_PHONE_VIBERATE_STATUS, false);
 				editor.commit();
@@ -134,18 +139,29 @@ public class PrefsActivity extends FragmentActivity implements OnClickListener {
 					JwcAction.UPDATE_EXAM_SCHEDULE);
 			userInfoDialog.show(getSupportFragmentManager(), "getUserJwcInfo");
 			break;
-		case R.id.id_update_map_data:
-			//initiateDataService.initiateMapData(1);
-			Toast.makeText(this,
-					"该版本尚未实现该功能",
-					Toast.LENGTH_SHORT).show();
+		case R.id.setting_share_tv:
+			Intent it = new Intent(Intent.ACTION_SEND);
+			it.setType("text/plain");
+			it.putExtra(Intent.EXTRA_SUBJECT, "分享");
+			it.putExtra(Intent.EXTRA_TEXT,
+					Constant.SHARE_DESCRIPTION + Constant.DOWNLOAD_URL);
+			startActivity(Intent.createChooser(it, "选择分享方式"));
 			break;
-		case R.id.id_update_restaurant_data:
-			//initiateDataService.initiateRestaurantData(1);
-			Toast.makeText(this,
-					"该版本尚未实现该功能",
-					Toast.LENGTH_SHORT).show();
+		case R.id.aboutus_tv:
+			startActivity(new Intent(this, AboutUsActivity.class));
 			break;
+		// case R.id.id_update_map_data:
+		// //initiateDataService.initiateMapData(1);
+		// Toast.makeText(this,
+		// "该版本尚未实现该功能",
+		// Toast.LENGTH_SHORT).show();
+		// break;
+		// case R.id.id_update_restaurant_data:
+		// //initiateDataService.initiateRestaurantData(1);
+		// Toast.makeText(this,
+		// "该版本尚未实现该功能",
+		// Toast.LENGTH_SHORT).show();
+		// break;
 		}
 
 	}

@@ -9,95 +9,139 @@
         android:id="@+id/settings_title_bar"
         layout="@layout/title_bar" />
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/white_bg"
+        android:orientation="vertical"
+        android:paddingLeft="10dp"
+        android:paddingRight="15dp" >
 
-    <RelativeLayout
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal" >
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="55dp"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/id_enable_smart_viberate_textview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:fontFamily="Arial"
+                android:gravity="center"
+                android:text="@string/use_smart_viberate_label"
+                android:textSize="21sp" />
+
+            <CheckBox
+                android:id="@+id/id_enable_smart_viberate_checkbox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true" />
+        </RelativeLayout>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/image_description"
+            android:src="@drawable/divider1" />
 
         <TextView
-            android:id="@+id/id_enable_smart_viberate_textview"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:id="@+id/id_update_course_schedule"
+            android:layout_width="fill_parent"
+            android:layout_height="55dp"
+            android:gravity="center_vertical"
             android:layout_marginLeft="10dp"
-            android:layout_marginTop="10dp"
+            android:drawableRight="@drawable/index_arrow"
             android:fontFamily="Arial"
-            android:gravity="center"
-            android:text="@string/use_smart_viberate_label"
-            android:textSize="28sp"/> 
+            android:text="@string/course_schedule_update_label"
+            android:textSize="21sp" />
 
-        <CheckBox
-            android:id="@+id/id_enable_smart_viberate_checkbox"
-            android:layout_width="wrap_content"
+        <ImageView
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="7dp"
-             android:layout_alignParentRight="true"
-            android:checked="true" />
-    </RelativeLayout>
+            android:contentDescription="@string/image_description"
+            android:src="@drawable/divider1" />
 
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:background="@android:color/black" />
+        <TextView
+            android:id="@+id/id_update_exam_schedule"
+            android:layout_width="fill_parent"
+            android:layout_height="55dp"
+            android:gravity="center_vertical"
+            android:layout_marginLeft="10dp"
+            android:drawableRight="@drawable/index_arrow"
+            android:fontFamily="Arial"
+            android:text="@string/exam_schedule_update_label"
+            android:textSize="21sp" />
 
-    <TextView
-        android:id="@+id/id_update_course_schedule"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="10dp"
-        android:layout_marginTop="10dp"
-        android:fontFamily="Arial"
-        android:text="@string/course_schedule_update_label"
-        android:textSize="28sp" />
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/image_description"
+            android:src="@drawable/divider1" />
         
+        <TextView
+            android:id="@+id/setting_share_tv"
+            android:layout_width="fill_parent"
+            android:layout_height="55dp"
+            android:gravity="center_vertical"
+            android:layout_marginLeft="10dp"
+            android:drawableRight="@drawable/index_arrow"
+            android:fontFamily="Arial"
+            android:text="@string/setting_share_label"
+            android:textSize="21sp" />
 
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:background="@android:color/black" />
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/image_description"
+            android:src="@drawable/divider1" />
 
-    <TextView
-        android:id="@+id/id_update_exam_schedule"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="10dp"
-        android:layout_marginTop="10dp"
-        android:fontFamily="Arial"
-        android:text="@string/exam_schedule_update_label"
-        android:textSize="28sp" />
+        <TextView
+            android:id="@+id/aboutus_tv"
+            android:layout_width="fill_parent"
+            android:layout_height="55dp"
+            android:gravity="center_vertical"
+            android:layout_marginLeft="10dp"
+            android:drawableRight="@drawable/index_arrow"
+            android:fontFamily="Arial"
+            android:text="@string/about_palm_jnu"
+            android:textSize="21sp" />
 
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:background="@android:color/black" />
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/image_description"
+            android:src="@drawable/divider1" />
+    </LinearLayout>
 
-    <TextView
-        android:id="@+id/id_update_restaurant_data"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-       android:layout_marginLeft="10dp"
-        android:layout_marginTop="10dp"
-        android:fontFamily="Arial"
-        android:textSize="28sp" 
-        android:text="@string/waimaixt_update_label" />
+    <!-- <TextView -->
+    <!-- android:id="@+id/id_update_restaurant_data" -->
+    <!-- android:layout_width="fill_parent" -->
+    <!-- android:layout_height="wrap_content" -->
+    <!-- android:layout_marginLeft="10dp" -->
+    <!-- android:layout_marginTop="10dp" -->
+    <!-- android:fontFamily="Arial" -->
+    <!-- android:text="@string/waimaixt_update_label" -->
+    <!-- android:textSize="28sp" /> -->
 
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:background="@android:color/black" />
 
-    <TextView
-        android:id="@+id/id_update_map_data"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="10dp"
-        android:layout_marginTop="10dp"
-        android:fontFamily="Arial"
-        android:text="@string/map_data_update_label"
-        android:textSize="28sp" />
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:background="@android:color/black" />
+    <!-- <ImageView -->
+    <!-- android:layout_width="match_parent" -->
+    <!-- android:layout_height="wrap_content" -->
+    <!-- android:contentDescription="@string/image_description" -->
+    <!-- android:src="@drawable/divider2"/> -->
+
+
+    <!-- <TextView -->
+    <!-- android:id="@+id/id_update_map_data" -->
+    <!-- android:layout_width="fill_parent" -->
+    <!-- android:layout_height="wrap_content" -->
+    <!-- android:layout_marginLeft="10dp" -->
+    <!-- android:layout_marginTop="10dp" -->
+    <!-- android:fontFamily="Arial" -->
+    <!-- android:text="@string/map_data_update_label" -->
+    <!-- android:textSize="28sp" /> -->
 
 </LinearLayout>
