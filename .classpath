@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
 	<classpathentry kind="src" path="src"/>
-	<classpathentry kind="src" path="gen"/>
 	<classpathentry exported="true" kind="con" path="com.android.ide.eclipse.adt.LIBRARIES"/>
 	<classpathentry kind="lib" path="//HECTOR-WORKSTAT/Dependencies/Lombok/lombok.jar"/>
 	<classpathentry exported="true" kind="con" path="com.android.ide.eclipse.adt.DEPENDENCIES"/>
@@ -9,5 +8,6 @@
 	<classpathentry exported="true" kind="lib" path="C:/Documents and Settings/Hector/My Documents/Work Station/Eclipse_Workplace/Dependencies/Jsoup/Jsoup-Hebe.jar"/>
 	<classpathentry exported="true" kind="lib" path="C:/Documents and Settings/Hector/My Documents/Work Station/Eclipse_Workplace/Dependencies/apache-common-io/commons-io-1.2.jar"/>
 	<classpathentry exported="true" kind="lib" path="C:/Documents and Settings/Hector/My Documents/Work Station/Eclipse_Workplace/Dependencies/google-gson-2.2.2-release/google-gson-2.2.2/gson-2.2.2.jar"/>
+	<classpathentry kind="src" path="gen"/>
 	<classpathentry kind="output" path="bin/classes"/>
 </classpath>
