@@ -86,7 +86,7 @@ public class ICourseScheduleActivity extends FragmentActivity {
 	@Override
 	protected void onResume() {
 		super.onResume();
-		
+		weekday = Util.getWeekdayInt();
 		index = weekday;
 		mPager.setCurrentItem(index);
 //		Log.d(TAG, "onResume " + index);
@@ -253,7 +253,7 @@ public class ICourseScheduleActivity extends FragmentActivity {
 		mPager.setOffscreenPageLimit(1);
 		mPager.setAdapter(mpAdapter);
 		Log.d(TAG, "init " + index);
-		mPager.setCurrentItem(1);
+		mPager.setCurrentItem(0);
 		mPager.setOnPageChangeListener(new MyOnPageChangeListener());
 	}
 

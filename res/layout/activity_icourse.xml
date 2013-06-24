@@ -9,9 +9,27 @@
         android:layout_height="fill_parent"
         android:orientation="vertical" >
 
-        <include
-            android:id="@+id/ischedule_title_bar"
-            layout="@layout/title_bar" />
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/transparent_bg" >
+
+            <include
+                android:id="@+id/ischedule_title_bar"
+                layout="@layout/title_bar" />
+
+            <ImageButton
+                android:id="@+id/icourse_setting_btn"
+                android:layout_width="60dp"
+                android:layout_height="48dp"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:background="@drawable/transparent_bg"
+                android:contentDescription="@string/image_description"
+                android:drawablePadding="5dp"
+                android:onClick="btnRigthOnClick"
+                android:src="@drawable/selector_settings_btn" />
+        </RelativeLayout>
 
         <FrameLayout
             android:id="@android:id/tabcontent"
