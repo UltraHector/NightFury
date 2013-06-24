@@ -120,7 +120,7 @@ public class Constant {
 	public static final String NIGHTFURY_CLIENT_DB_DATA = "NightFuryDBData";
 
 	// 下载数据包Url，更换服务器必须更换Url地址
-	public static final String NIGHTFURY_SERVER_URL = "http://202.116.3.39:8000";
+	public static final String NIGHTFURY_SERVER_URL = "http://hebe.jnu.edu.cn";
 	// check connection to server status constants
 	public static final String NIGHTFURY_SERVER_CONNECTION_CHECK_SUB_URL = "/whetherConnectionBlock";
 	public static final String NIGHTFURY_SERVER_CONNECTION_STATUS = "Status";
