@@ -14,15 +14,6 @@
         android:layout_below="@+id/waimaixt_title_bar"
         android:orientation="vertical" >
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="  简介："
-            android:textStyle="bold"
-            android:textSize="21sp"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:background="@drawable/waimaixt_groups_bg"
-             />
 
         <TextView
             android:id="@+id/waimaixt_restaurant_introduction_textview"

@@ -12,6 +12,7 @@ import java.util.List;
 
 import android.content.Context;
 import android.graphics.BitmapFactory;
+import android.graphics.Color;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -108,6 +109,8 @@ public class RestaurantExpandableAdapter extends BaseExpandableListAdapter {
 
 		TextView titleTextView = (TextView) relativeLayout
 				.findViewById(R.id.waimaixt_item_title);
+//		if(itemTitle.startsWith("山"))
+//			titleTextView.setTextColor(Color.rgb(0, 0, 255));
 		titleTextView.setText(itemTitle);
 		TextView subTitleTextView = (TextView) relativeLayout
 				.findViewById(R.id.waimaixt_item_subtitle);

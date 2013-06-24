@@ -12,9 +12,7 @@ import java.util.List;
 
 import com.TroyEmpire.NightFury.Entity.Restaurant;
 import com.TroyEmpire.NightFury.Ghost.IService.ICallInMealService;
-import com.TroyEmpire.NightFury.Ghost.IService.IInitiateDataService;
 import com.TroyEmpire.NightFury.Ghost.Service.CallInMealService;
-import com.TroyEmpire.NightFury.Ghost.Service.InitiateDataService;
 import com.TroyEmpire.NightFury.UI.Adapter.RestaurantExpandableAdapter;
 
 import android.app.Activity;
@@ -39,15 +37,12 @@ public class WaiMaiXTActivity extends Activity
 	RestaurantExpandableAdapter restaurantAdapter;
 	// 需要的接口服务:餐店数据库服务restService、初始化数据库服务dataService
 	private ICallInMealService restService = new CallInMealService(1);
-	private IInitiateDataService dataService = new InitiateDataService();
-	
 	//收藏夹和全部的位置号
 	private final static int FAVORITE_GROUP_POS = 0;
 	//长按菜单选项
 	private final static int MENU_ADD_FAVORITE = 0;
 	private final static int MENU_DELETE_FAVORITE = 1;
 	private final static int MENU_CALL = 2;
-	private final static int MENU_RELOAD_REST_LIST = 3;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -104,7 +99,6 @@ public class WaiMaiXTActivity extends Activity
 				menu.add(1, MENU_ADD_FAVORITE, 0, "加入收藏夹");
 			}
 			menu.add(0, MENU_CALL, 0, "马上拨号订餐");
-			menu.add(0,MENU_RELOAD_REST_LIST,0,"更新餐店信息");
 		}
 	}
 	
@@ -158,9 +152,6 @@ public class WaiMaiXTActivity extends Activity
 				Intent callIntent = new Intent(Intent.ACTION_CALL,Uri.parse("tel:" + selectedItem.getPhoneNumber()));
 				startActivity(callIntent);
 				break;
-			case MENU_RELOAD_REST_LIST:
-				Log.d("reload","restaurant list");
-				dataService.initiateRestaurantData(1);
 			}
 		}else{
 			Log.i("type", "group");
