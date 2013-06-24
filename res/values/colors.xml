@@ -7,6 +7,7 @@
     <item name="bnt_back_background_focused" type="drawable">@color/titlebar_btn_bg</item>
     <item name="home_item01_bg" type="drawable">#803399ff</item>
     <item name="home_item02_bg" type="drawable">#3399ff</item>
+    <item name="white_bg" type="drawable">@color/white</item>
 
     <color name="ischedule_score_title">@color/blue</color>
     <color name="titlebar_btn_bg">@color/orange</color>

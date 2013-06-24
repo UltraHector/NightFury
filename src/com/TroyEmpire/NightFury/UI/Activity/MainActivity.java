@@ -61,7 +61,7 @@ public class MainActivity extends Activity implements OnClickListener {
 	private void initViews() {
 		ImageButton settingBtn = (ImageButton) findViewById(R.id.sys_setting);
 		ImageButton aboutBtn = (ImageButton) findViewById(R.id.sys_helper);
-		ImageButton exitBtn = (ImageButton) findViewById(R.id.sys_exit);
+	//	ImageButton exitBtn = (ImageButton) findViewById(R.id.sys_exit);
 		View lv_XinXiPT = findViewById(R.id.home_xinxipt_lv);
 		View lv_XiaoYuanDT = findViewById(R.id.home_xiaoyuandt_lv);
 		View lv_ICourse = findViewById(R.id.home_icourse_lv);
@@ -71,7 +71,7 @@ public class MainActivity extends Activity implements OnClickListener {
 
 		settingBtn.setOnClickListener(this);
 		aboutBtn.setOnClickListener(this);
-		exitBtn.setOnClickListener(this);
+//		exitBtn.setOnClickListener(this);
 		lv_XinXiPT.setOnClickListener(this);
 		lv_XiaoYuanDT.setOnClickListener(this);
 		lv_ICourse.setOnClickListener(this);
@@ -119,15 +119,15 @@ public class MainActivity extends Activity implements OnClickListener {
 		case R.id.sys_helper:
 			startActivity(new Intent(this, AboutUsActivity.class));
 			break;
-		// 退出按钮
-		case R.id.sys_exit:
-			Intent it = new Intent(Intent.ACTION_SEND);
-			it.setType("text/plain");
-			it.putExtra(Intent.EXTRA_SUBJECT, "分享");
-			it.putExtra(Intent.EXTRA_TEXT,
-					"掌上暨大无比强大，值得一试哦，下载地址：http://www.baidu.com");
-			startActivity(Intent.createChooser(it, "选择分享方式"));
-			break;
+//		// 退出按钮
+//		case R.id.sys_exit:
+//			Intent it = new Intent(Intent.ACTION_SEND);
+//			it.setType("text/plain");
+//			it.putExtra(Intent.EXTRA_SUBJECT, "分享");
+//			it.putExtra(Intent.EXTRA_TEXT,
+//					"掌上暨大无比强大，值得一试哦，下载地址：http://www.baidu.com");
+//			startActivity(Intent.createChooser(it, "选择分享方式"));
+//			break;
 		}
 	}
 

@@ -8,6 +8,7 @@
     <string name="imageview_main_function_gridview_item_logo_image">主要功能图标</string>
     <string name="library_label">图书馆</string>
     <string name="xiaoyuanhy_label">校园黄页</string>
+    <string name="setting_label">设置</string>
 
     <!-- 信息平台 -->
     <string name="xinxipt_label">信息平台</string>
@@ -47,7 +48,7 @@
     
     
    <!-- 设置相关命名 -->
-    <string name="use_smart_viberate_label">启用智能震机系统</string>
+    <string name="use_smart_viberate_label">启用智能震机</string>
     <string name="course_schedule_update_label">更新课程表</string>
     <string name="exam_schedule_update_label">更新考试表</string>
     <string name="waimaixt_update_label">更新餐店信息</string>
@@ -55,6 +56,7 @@
     <string name="settings_title">设置</string>
     
     <string name="about_us_label">关于我们</string>
+    <string name="about_palm_jnu">关于掌上暨大</string>
     <string name="action_bar_share_with">Share with</string>
     <string name="icourse_course_name">课程名</string>
     <string name="icourse_status">状态</string>
@@ -69,6 +71,7 @@
     <string name="icourse_schedule_friday">五</string>
     <string name="icourse_schedule_saturday">六</string>
     <string name="icourse_schedule_sunday">日</string>
+    <string name="setting_share_label">分享</string>
     
 
 </resources>

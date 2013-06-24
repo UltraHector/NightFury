@@ -210,15 +210,15 @@
             android:paddingLeft="0dp"
             android:src="@drawable/sys_helper" />
 
-        <ImageButton
-            android:id="@+id/sys_exit"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:layout_marginLeft="7dp"
-            android:layout_marginTop="14dp"
-            android:background="@drawable/transparent_bg"
-            android:contentDescription="@string/image_description"
-            android:src="@drawable/sys_share" />
+<!--         <ImageButton -->
+<!--             android:id="@+id/sys_exit" -->
+<!--             android:layout_width="40dp" -->
+<!--             android:layout_height="40dp" -->
+<!--             android:layout_marginLeft="7dp" -->
+<!--             android:layout_marginTop="14dp" -->
+<!--             android:background="@drawable/transparent_bg" -->
+<!--             android:contentDescription="@string/image_description" -->
+<!--             android:src="@drawable/sys_share" /> -->
     </LinearLayout>
 
 </LinearLayout>
