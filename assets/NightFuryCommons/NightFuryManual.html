@@ -32,11 +32,13 @@ ul#list-nav li a {
 			onclick="switchToAboutMe()">关于Hebe</a></li>
 		<li><a id="manualLink" style="background: green; color: #eee;"
 			href="#" onclick="switchToManual()">使用手册</a></li>
+		<li><a id="callingLink" style="background: green; color: #eee;"
+			href="#" onclick="switchToCalling()">召唤队友</a></li>
 		<li><a id="moreFuncLink" style="background: green; color: #eee;"
 			href="#" onclick="switchToMoreFunc()">更多精彩</a></li>
 	</ul>
 	<div id="manual" style="display: none;">
-		<p>掌上暨大（Hebe）Version 1.0 作为首个校园软件版本，功能较为简单。
+		<p>&nbsp;&nbsp;掌上暨大（Hebe）Version 1.0 作为首个校园软件版本，功能较为简单。
 			主要功能分为：信息平台，校园地图，外卖系统，i 课程和图书馆。</p>
 		<ul style="list-style-type: circle;">
 			<li>
@@ -61,12 +63,11 @@ ul#list-nav li a {
 				<h4>图书馆</h4> 图书馆在第一版本中仅仅作为一个窗口链接到暨大图书馆首页。
 			</li>
 		</ul>
-		<p>根据服务条款，Hebe对教务处的密码账号信息绝对保密。客户端不会向服务器发送任何有关个人密码信息。</p>
+		<p>&nbsp;&nbsp;根据服务条款，Hebe对教务处的密码账号信息绝对保密。客户端不会向服务器发送任何有关个人密码信息。</p>
 
 	</div>
 	<div id="aboutHebe">
-		<p>掌上暨大（English Release Name: Hebe）,是一款校园手机应用软件。首期版本支持Android操作系统的
-			智能机。后期版本会逐渐支持IPhone系列手机。</p>
+		<p>&nbsp;&nbsp;掌上暨大（English Release Name: Hebe）,是一款校园手机应用软件。首期版本支持Android操作系统的智能机。后期版本会逐渐支持IPhone系列手机。</p>
 		<ul style="list-style-type: circle;">
 			<li>
 				<h4>Hebe来源</h4> Hebe是古希腊神话中宙斯和赫拉女儿，象征着青春快乐。以Hebe命名祝愿暨大的同学，保持一颗年轻与快乐
@@ -78,11 +79,11 @@ ul#list-nav li a {
 			</li>
 		</ul>
 		<p>
-			Hebe Version 1.0 的开发完全由暨大信科院计算机系学生完成。<b>团队成员</b>：福尔魔光（任旭光），吴国锦，李玉滔，陈瑜芳，何健文。
+			&nbsp;&nbsp;Hebe Version 1.0 的开发完全由暨大信科院计算机系学生完成。<b>团队成员</b>：福尔魔光（任旭光），吴国锦，李玉滔，陈瑜芳，何健文。
 		</p>
 	</div>
 	<div id="moreFunc" style="display: none;">
-		<p>由于Version1.0 开发时间有限，很多精彩功能没有在Version 1.0中呈现。后期版本中将为您一一呈现</p>
+		<p>&nbsp;&nbsp;由于Version1.0 开发时间有限，很多精彩功能没有在Version 1.0中呈现。后期版本中将为您一一呈现</p>
 		<ul style="list-style-type: circle;">
 		    <li><h4>课程信息共享</h4> 作为移动学习的尝试，我们会努力实现课程信息的方便共享。</li>
 			<li>
@@ -93,60 +94,113 @@ ul#list-nav li a {
 				无论是组团踢足球，组团逛街看电影。一条消息全暨大都能知晓，您的周末不在寂寞。
 			</li>
 		</ul>
-		<p>热情的我们服务热心的你，Hebe作为高融合的校园软件，将最大力度的融合一切能为您服务的
+		<p>&nbsp;&nbsp;热情的我们服务热心的你，Hebe作为高融合的校园软件，将最大力度的融合一切能为您服务的
 			功能。<b>如果您有更多的Idea，别忘了告诉我们啊。</b>掌上暨大交流群: 132526208. 或许您今日的想法将会是掌上暨大明天的一个现实。</p>
+	</div>
+	<div id="calling" style="display: none;">
+	   <p>&nbsp;&nbsp;Hebe V1.0开发团队大多都即将走出暨大的校园，但是Hebe后期版本还有很多的功能没有实现。所以我们真诚邀请暨大的同学加入我们的开发团队，接手Hebe的后期开发，我们将义务提供最大的支持和帮助。</p>
+	   <ul style="list-style-type: circle;">
+		  <li><h4>All What We Need Is The Passion</h4></li>
+		  或许你没有出色的编程能力和卓越的PS技术，没关系！如果你有创新和创造的激情，我们都欢迎你的加入。
+		  <li><h4>All What We Provide Is a Team</h4></li>
+		  我们不能提供任何项目，实习的证书，但是我们作为一个Team，共同开发，相信学到的知识会是你我一生的财富。一起编程，一起思考，或许一起创业。
+		  <li><h4>All What We Want Is to Break Silence</h4></li>
+		  学习是一个美妙的过程，同时我们也想做到团结你我，打破寂静，创造荣誉。
+		</ul>
+		<p>&nbsp;&nbsp;更多了解，请加入我们的学习交流群：132526208。我们在以后的规划中希望组建暨大计算机协会，idea共享，代码只为开源。</p>
 	</div>
 	<script>
 		function switchToAboutMe() {
 			var aboutHebe = document.getElementById("aboutHebe");
 			var manual = document.getElementById("manual");
 			var moreFunc = document.getElementById("moreFunc");
+			var calling = document.getElementById("calling");
 			var aboutMeLink = document.getElementById("aboutHebeLink");
 			var manualLink = document.getElementById("manualLink");
 			var moreFuncLink = document.getElementById("moreFuncLink");
+			var callingLink = document.getElementById("callingLink");
 			aboutHebe.style.display = 'block';
 			manual.style.display = 'none';
 			moreFunc.style.display = 'none';
+			calling.style.display = 'none';
+			
 			aboutMeLink.style.color = 'black';
 			aboutMeLink.style.background = 'white';
 			manualLink.style.color = '#eee';
 			manualLink.style.background = 'green';
 			moreFuncLink.style.color = '#eee';
 			moreFuncLink.style.background = 'green';
+			callingLink.style.color = '#eee';
+			callingLink.style.background = 'green';
 		}
 		function switchToMoreFunc() {
 			var aboutHebe = document.getElementById("aboutHebe");
 			var manual = document.getElementById("manual");
 			var moreFunc = document.getElementById("moreFunc");
+			var calling = document.getElementById("calling");
 			var aboutMeLink = document.getElementById("aboutHebeLink");
 			var manualLink = document.getElementById("manualLink");
 			var moreFuncLink = document.getElementById("moreFuncLink");
+			var callingLink = document.getElementById("callingLink");
 			aboutHebe.style.display = 'none';
 			manual.style.display = 'none';
 			moreFunc.style.display = 'block';
+			calling.style.display = 'none';
 			aboutMeLink.style.color = "#eee";
 			aboutMeLink.style.background = 'green';
 			manualLink.style.color = '#eee';
 			manualLink.style.background = 'green';
 			moreFuncLink.style.color = 'black';
 			moreFuncLink.style.background = 'white';
+			callingLink.style.color = '#eee';
+			callingLink.style.background = 'green';
 		}
 		function switchToManual() {
 			var aboutHebe = document.getElementById("aboutHebe");
 			var manual = document.getElementById("manual");
 			var moreFunc = document.getElementById("moreFunc");
+			var calling = document.getElementById("calling");
 			var aboutMeLink = document.getElementById("aboutHebeLink");
 			var manualLink = document.getElementById("manualLink");
 			var moreFuncLink = document.getElementById("moreFuncLink");
+			var callingLink = document.getElementById("callingLink");
 			aboutHebe.style.display = 'none';
 			manual.style.display = 'block';
 			moreFunc.style.display = 'none';
+			calling.style.display = 'none';
+			
 			aboutMeLink.style.color = "#eee";
 			aboutMeLink.style.background = 'green';
 			manualLink.style.color = 'black';
 			manualLink.style.background = 'white';
 			moreFuncLink.style.color = '#eee';
 			moreFuncLink.style.background = 'green';
+			callingLink.style.color = '#eee';
+			callingLink.style.background = 'green';
+		}
+		
+		function switchToCalling(){
+			var aboutHebe = document.getElementById("aboutHebe");
+			var manual = document.getElementById("manual");
+			var moreFunc = document.getElementById("moreFunc");
+			var calling = document.getElementById("calling");
+			var aboutMeLink = document.getElementById("aboutHebeLink");
+			var manualLink = document.getElementById("manualLink");
+			var moreFuncLink = document.getElementById("moreFuncLink");
+			var callingLink = document.getElementById("callingLink");
+			aboutHebe.style.display = 'none';
+			manual.style.display = 'none';
+			moreFunc.style.display = 'none';
+			calling.style.display = 'block';
+			
+			aboutMeLink.style.color = "#eee";
+			aboutMeLink.style.background = 'green';
+			manualLink.style.color = '#eee';
+			manualLink.style.background = 'green';
+			moreFuncLink.style.color = '#eee';
+			moreFuncLink.style.background = 'green';
+			callingLink.style.color = 'black';
+			callingLink.style.background = 'white';
 		}
 	</script>
 <body>
