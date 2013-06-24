@@ -32,9 +32,6 @@ public class XiaoYuanDTDisplayPathActivity extends Activity {
 		xiaoYuanDTWebView.disPlayShortestPath(sourceBuilding.getPathDotId(), destBuilding.getPathDotId());
 	}
 	
-	public void btnHomeOnClick(View v) {
-		startActivity(new Intent(this, MainActivity.class));
-	}
 
 	public void btnBackOnClick(View v) {
 		finish();

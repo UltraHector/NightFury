@@ -26,10 +26,6 @@ public class AboutUsActivity extends Activity {
 		showText.loadUrl(Constant.HEBE_MANUAL_HTML_PATH);
 	}
 	
-	// 实现标题栏的Home键
-	public void btnHomeOnClick(View v) {
-		startActivity(new Intent(this, MainActivity.class));
-	}
 
 	// 实现标题栏的返回键
 	public void btnBackOnClick(View v) {

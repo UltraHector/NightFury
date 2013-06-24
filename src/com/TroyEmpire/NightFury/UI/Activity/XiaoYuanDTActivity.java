@@ -62,10 +62,6 @@ public class XiaoYuanDTActivity extends Activity implements OnClickListener {
 	}
 
 	
-	public void btnHomeOnClick(View v) {
-		startActivity(new Intent(this, MainActivity.class));
-	}
-
 	
 	public void btnBackOnClick(View v) {
 		finish();
