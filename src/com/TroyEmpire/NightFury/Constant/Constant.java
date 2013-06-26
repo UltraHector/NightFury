@@ -164,7 +164,7 @@ public class Constant {
 
 	// broadcast Actions
 	public static final String BROADCAST_GET_EXAM_ACTION = "com.TroyEmpire.NightFury.UI.Fragment.UserJwcInfoDialogFragment.GET_EXAM_SCORE_ACTION";
-	public static final String DOWNLOAD_URL = "http://hebe.jnu.edu.cn/downloaData/hebeVersion1";
+	public static final String DOWNLOAD_URL = "http://hebe.jnu.edu.cn/downloadData/hebeVersion1";
 	public static final String SHARE_DESCRIPTION = "掌上暨大无比强大，值得一试哦，下载地址：";
 
 }

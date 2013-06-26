@@ -38,10 +38,10 @@ public interface IMapService {
 	public PathDot getPathDotById(int id);
 
 	/**
-	 * @param id
+	 * @param building
 	 *            of sourcePathDot , id of destPathDot
 	 * @return a String of id which consist a shortest path.
 	 * */
-	public String getShortestPath(int sourceId, int destId);
+	public String getShortestPath(Building sourceBuilding, Building destBuilding);
 
 }

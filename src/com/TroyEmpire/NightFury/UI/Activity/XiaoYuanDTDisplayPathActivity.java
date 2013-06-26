@@ -29,7 +29,7 @@ public class XiaoYuanDTDisplayPathActivity extends Activity {
 		xiaoYuanDTWebView.setJavaScriptEnabled(true);
 		xiaoYuanDTWebView.loadUrl("file:///android_asset/map.html");
 		xiaoYuanDTWebView.addMarkerForPath(sourceBuilding, destBuilding);
-		xiaoYuanDTWebView.disPlayShortestPath(sourceBuilding.getPathDotId(), destBuilding.getPathDotId());
+		xiaoYuanDTWebView.disPlayShortestPath(sourceBuilding, destBuilding);
 	}
 	
 

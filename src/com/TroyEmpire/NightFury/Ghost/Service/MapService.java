@@ -232,8 +232,8 @@ public class MapService implements IMapService {
 	}
 
 	@Override
-	public String getShortestPath(int sourceId, int destId) {
-		return shortestPathService.getShortestPath(sourceId, destId);
+	public String getShortestPath(Building sourceBuilding, Building destBuilding) {
+		return shortestPathService.getShortestPath(sourceBuilding, destBuilding);
 	}
 
 }

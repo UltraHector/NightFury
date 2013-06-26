@@ -74,28 +74,47 @@ public class XiaoYuanDTWebView extends WebView {
 		super.requestFocus();// this method cannot not Override,so I put it here
 	}
 
-	public void disPlayShortestPath(int sourceId, int destId) {
+	public void disPlayShortestPath(Building sourceBuilding,
+			Building destBuilding) {
 		// find pathId from dataBase
-		String stringPath = mapService.getShortestPath(sourceId, destId);
+		String stringPath = mapService.getShortestPath(sourceBuilding,
+				destBuilding);
 
-		String[] res = stringPath.split("#");
+		// Normal route
+		if (!stringPath.startsWith("E")) {
+			String[] res = stringPath.split("#");
 
-		double[] latitude = new double[res.length];
-		double[] longitude = new double[res.length];
+			double[] latitude = new double[res.length];
+			double[] longitude = new double[res.length];
 
-		for (int i = 0; i < res.length; i++) {
-			PathDot pathDot = mapService.getPathDotById(Integer
-					.parseInt(res[i]));
-			if (pathDot != null) {
-				latitude[i] = pathDot.getLatitude();
-				longitude[i] = pathDot.getLongitude();
+			for (int i = 0; i < res.length; i++) {
+				PathDot pathDot = mapService.getPathDotById(Integer
+						.parseInt(res[i]));
+				if (pathDot != null) {
+					latitude[i] = pathDot.getLatitude();
+					longitude[i] = pathDot.getLongitude();
+				}
+			}
+			for (int i = 1; i < res.length; i++) {
+				String line = String.valueOf(latitude[i - 1]) + "#"
+						+ String.valueOf(longitude[i - 1]) + "#"
+						+ String.valueOf(latitude[i]) + "#"
+						+ String.valueOf(longitude[i]);
+				this.printLine(line);
 			}
 		}
-		for (int i = 1; i < res.length; i++) {
-			String line = String.valueOf(latitude[i - 1]) + "#"
-					+ String.valueOf(longitude[i - 1]) + "#"
-					+ String.valueOf(latitude[i]) + "#"
-					+ String.valueOf(longitude[i]);
+		// Some error happens because no shortest path returned
+		else {
+			/*
+			 * If the shortest path is not found due to the error of the map
+			 * database just print the line between those two buildings the
+			 * returned string starts with an character "E#"
+			 */
+			String[] buildingPosition = stringPath.split("#");
+			String line = String.valueOf(buildingPosition[1]) + "#"
+					+ String.valueOf(buildingPosition[2]) + "#"
+					+ String.valueOf(buildingPosition[3]) + "#"
+					+ String.valueOf(buildingPosition[4]);
 			this.printLine(line);
 		}
 
