@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/main_background" >
+
+    <include layout="@layout/title_bar"
+     	android:id="@+id/xiaoyuandt_title_bar" />
+
+    <!-- <LinearLayout -->
+    <!-- xmlns:android="http://schemas.android.com/apk/res/android" -->
+    <!-- android:layout_width="fill_parent" -->
+    <!-- android:layout_height="wrap_content" -->
+    <!-- android:background="@color/background" -->
+    <!-- android:orientation="horizontal" > -->
+
+
+    <!-- <Button -->
+    <!-- android:id="@+id/xiaoYuanDTPrintLineButton" -->
+    <!-- android:layout_width="fill_parent" -->
+    <!-- android:layout_height="wrap_content" -->
+    <!-- android:layout_weight="3.0" -->
+    <!-- android:text="@string/xiaoYuanDTWebViwePrintLine" > -->
+    <!-- </Button> -->
+    <!-- </LinearLayout> -->
+
+    <com.TroyEmpire.NightFury.UI.ViewHolder.XiaoYuanDTWebView
+        android:id="@+id/xiaoyuandt_display_path_webview"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/xiaoyuandt_title_bar" >
+    </com.TroyEmpire.NightFury.UI.ViewHolder.XiaoYuanDTWebView>
+
+</RelativeLayout>

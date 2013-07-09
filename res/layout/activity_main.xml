@@ -1,0 +1,224 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/home_bg"
+    android:orientation="vertical"
+    android:paddingBottom="8dp"
+    android:paddingLeft="20dp"
+    android:paddingTop="40dp" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:paddingRight="35dp" >
+
+        <!-- row 1 -->
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:baselineAligned="false"
+            android:orientation="horizontal" >
+
+            <!-- row 1, col 1 -->
+
+            <LinearLayout
+                android:id="@+id/home_xinxipt_lv"
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:background="@drawable/selector_home1_bg"
+                android:clickable="true"
+                android:gravity="center" >
+
+                <TextView
+                    android:id="@+id/tv_home_xinxipt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableTop="@drawable/xinxipt_logo"
+                    android:gravity="center"
+                    android:text="@string/xinxipt_label"
+                    android:textColor="#000000"
+                    android:textSize="18sp" />
+            </LinearLayout>
+
+            <!-- row 1, col 2 -->
+
+            <LinearLayout
+                android:id="@+id/home_xiaoyuandt_lv"
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_marginLeft="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/selector_home1_bg"
+                android:clickable="true"
+                android:gravity="center" >
+
+                <TextView
+                    android:id="@+id/tv_home_xiaoyuandt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableTop="@drawable/xiaoyuandt_logo"
+                    android:gravity="center"
+                    android:text="@string/xiaoyuandt_label"
+                    android:textColor="#000000"
+                    android:textSize="18sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- row 2 -->
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="5dp"
+            android:layout_weight="1"
+            android:baselineAligned="false"
+            android:orientation="horizontal" >
+
+            <!-- row 2, col 1 -->
+
+            <LinearLayout
+                android:id="@+id/home_icourse_lv"
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:background="@drawable/selector_home1_bg"
+                android:clickable="true"
+                android:gravity="center" >
+
+                <TextView
+                    android:id="@+id/tv_home_icourse"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableTop="@drawable/icourse_logo"
+                    android:gravity="center"
+                    android:text="@string/icourse_label"
+                    android:textColor="#000000"
+                    android:textSize="18sp" />
+            </LinearLayout>
+
+            <!-- row 2, col 2 -->
+
+            <LinearLayout
+                android:id="@+id/home_waimaixt_lv"
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_marginLeft="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/selector_home2_bg"
+                android:clickable="true"
+                android:gravity="center" >
+
+                <TextView
+                    android:id="@+id/tv_home_waimaixt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableTop="@drawable/waimaixt_logo"
+                    android:gravity="center"
+                    android:text="@string/waimaixt_label"
+                    android:textColor="#000000"
+                    android:textSize="18sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- row 3 -->
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="5dp"
+            android:layout_weight="1"
+            android:baselineAligned="false"
+            android:orientation="horizontal" >
+
+            <!-- row 3, col 1 -->
+
+            <LinearLayout
+                android:id="@+id/home_labrary_lv"
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:background="@drawable/selector_home2_bg"
+                android:clickable="true"
+                android:gravity="center" >
+
+                <TextView
+                    android:id="@+id/tv_home_library"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableTop="@drawable/library_logo"
+                    android:gravity="center"
+                    android:text="@string/library_label"
+                    android:textColor="#000000"
+                    android:textSize="18sp" />
+            </LinearLayout>
+
+            <!-- row 3, col 2 -->
+
+            <LinearLayout
+                android:id="@+id/home_xiaoyuanhy_lv"
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_marginLeft="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/selector_home2_bg"
+                android:clickable="true"
+                android:gravity="center" >
+
+                <TextView
+                    android:id="@+id/tv_home_xiaoyuanhy"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableTop="@drawable/xiaoyuanhy_logo"
+                    android:gravity="center"
+                    android:text="@string/xiaoyuanhy_label"
+                    android:textColor="#000000"
+                    android:textSize="18sp" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:gravity="right"
+        android:orientation="horizontal"
+        android:paddingRight="8dp" >
+
+        <ImageButton
+            android:id="@+id/sys_setting"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/transparent_bg"
+            android:contentDescription="@string/image_description"
+            android:src="@drawable/sys_setting" />
+
+        <ImageButton
+            android:id="@+id/sys_helper"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="7dp"
+            android:layout_marginTop="6dp"
+            android:background="@drawable/transparent_bg"
+            android:contentDescription="@string/image_description"
+            android:paddingLeft="0dp"
+            android:src="@drawable/sys_helper" />
+
+        <ImageButton
+            android:id="@+id/sys_exit"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="7dp"
+            android:layout_marginTop="14dp"
+            android:background="@drawable/transparent_bg"
+            android:contentDescription="@string/image_description"
+            android:src="@drawable/sys_share" />
+    </LinearLayout>
+
+</LinearLayout>

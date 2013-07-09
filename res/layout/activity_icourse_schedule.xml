@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/main_background"
+    android:orientation="vertical" >
+
+
+    <RadioGroup
+        android:id="@+id/icourse_schedule_day_rg"
+        android:layout_width="fill_parent"
+        android:layout_height="40dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+        
+        <com.TroyEmpire.NightFury.UI.Entity.MyRadioButton
+            android:id="@+id/day_radio_btn0"
+            style="@style/day_style"
+            android:text="@string/icourse_schedule_sunday" />
+
+        <com.TroyEmpire.NightFury.UI.Entity.MyRadioButton
+            android:id="@+id/day_radio_btn1"
+            style="@style/day_style"
+            android:text="@string/icourse_schedule_monday" />
+
+        <com.TroyEmpire.NightFury.UI.Entity.MyRadioButton
+            android:id="@+id/day_radio_btn2"
+            style="@style/day_style"
+            android:text="@string/icourse_schedule_tuesday" />
+
+        <com.TroyEmpire.NightFury.UI.Entity.MyRadioButton
+            android:id="@+id/day_radio_btn3"
+            style="@style/day_style"
+            android:text="@string/icourse_schedule_wednesday" />
+
+        <com.TroyEmpire.NightFury.UI.Entity.MyRadioButton
+            android:id="@+id/day_radio_btn4"
+            style="@style/day_style"
+            android:text="@string/icourse_schedule_thursday" />
+        
+        <com.TroyEmpire.NightFury.UI.Entity.MyRadioButton
+            android:id="@+id/day_radio_btn5"
+            style="@style/day_style"
+            android:text="@string/icourse_schedule_friday" />
+
+        <com.TroyEmpire.NightFury.UI.Entity.MyRadioButton
+            android:id="@+id/day_radio_btn6"
+            style="@style/day_style"
+            android:text="@string/icourse_schedule_saturday" />
+
+    </RadioGroup>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/vPager"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_gravity="center"
+        android:persistentDrawingCache="animation" />
+
+</LinearLayout>

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">掌上暨大</string>
+    <string name="action_settings">Settings</string>
+    <string name="activity_main">主页</string>
+    <string name="image_description">图片</string>
+    <string name="imageview_main_function_gridview_item_logo_image">主要功能图标</string>
+    <string name="library_label">图书馆</string>
+    <string name="xiaoyuanhy_label">校园黄页</string>
+
+    <!-- 信息平台 -->
+    <string name="xinxipt_label">信息平台</string>
+    <string name="news_refreshing_tips">加载中</string>
+    <string name="news_refreshed_time_tips">更新于：</string>
+    <string name="imagebutton_main_function_more">更多信息</string>
+
+    <!-- 校园地图模块 -->
+    <string name="xiaoyuandt_label">校园地图</string>
+    <string name="path_source">起点:</string>
+    <string name="path_dest">终点：</string>
+    <string name="path">路径</string>
+    <string name="search">搜索</string>
+    <string name="get_name_by_location">get_name_by_location</string>
+    <string name="insert_into_path_dot">insert date to path dot</string>
+    <string name="xiaoYuanDTWebViwePrintLine">print line</string>
+
+     <!-- 外卖系统 -->
+    <string name="waimaixt_label">外卖系统</string>
+    <string name="restaurant_tips">中式（起送价：10元）</string>
+    
+    <!-- i 课程类 -->
+    <string name="icourse_label">i 课程</string>
+    <string name="icourse_schedule">日程</string>
+    <string name="icourse_course_label">课程表</string>
+    <string name="icourse_grade_label">成绩</string>
+    <string name="icourse_this_tern_grades">本学期成绩单</string>
+    <string name="icourse_exam_label">考试表</string>
+    <string name="confirm">确定</string>
+    <string name="concel">取消</string>
+    <string name="fragment_ischedule_jwc_dialog_edittext_account_number">学号</string>
+    <string name="fragment_ischedule_jwc_dialog_edittext_password">密码</string>
+    <string name="fragment_ischedule_jwc_dialog_edittext_captcha">验证码</string>
+    <string name="fragment_ischedule_jwc_dialog_checkbox_remember_me">记住我</string>
+    <string name="fragment_ischedule_jwc_dialog_imageview_captcha_description">验证码</string>
+    <string name="downloading_captcha">拉取验证码中</string>
+    
+    
+   <!-- 设置相关命名 -->
+    <string name="use_smart_viberate_label">启用智能震机系统</string>
+    <string name="course_schedule_update_label">更新课程表</string>
+    <string name="exam_schedule_update_label">更新考试表</string>
+    <string name="waimaixt_update_label">更新餐店信息</string>
+    <string name="map_data_update_label">更新地图信息</string>
+    <string name="settings_title">设置</string>
+    
+    <string name="about_us_label">关于我们</string>
+    <string name="action_bar_share_with">Share with</string>
+    <string name="icourse_course_name">课程名</string>
+    <string name="icourse_status">状态</string>
+    <string name="icourse_credit_point">学分</string>
+    <string name="icourse_grade">成绩</string>
+    <string name="icourse_display_grade_error_tips">登录失败，查成绩请先登录：</string>
+    <string name="login">登录</string>
+    <string name="icourse_schedule_monday">一</string>
+    <string name="icourse_schedule_tuesday">二</string>
+    <string name="icourse_schedule_wednesday">三</string>
+    <string name="icourse_schedule_thursday">四</string>
+    <string name="icourse_schedule_friday">五</string>
+    <string name="icourse_schedule_saturday">六</string>
+    <string name="icourse_schedule_sunday">日</string>
+    
+
+</resources>

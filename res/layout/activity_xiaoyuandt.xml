@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/main_background" >
+
+    <include layout="@layout/title_bar"
+     	android:id="@+id/xiaoyuandt_title_bar" />
+
+
+    <com.TroyEmpire.NightFury.UI.ViewHolder.XiaoYuanDTWebView
+        android:id="@+id/xiaoyuandt_webview"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/xiaoyuandt_title_bar" >
+    </com.TroyEmpire.NightFury.UI.ViewHolder.XiaoYuanDTWebView>
+
+    <RelativeLayout
+        android:id="@+id/xiaoyuandt_tab_bar"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_alignParentBottom="true"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:background="@drawable/tab_bar_bg" >
+
+        <Button
+            android:id="@+id/xiaoyuandt_search_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:layout_centerVertical="true"
+            android:paddingLeft= "20dp"
+            android:drawableLeft="@drawable/selector_xiaoyuandt_search_btn"
+            android:drawablePadding="5dp"
+            android:text="搜索" />
+
+        <ImageButton
+            android:id="@+id/xiaoyuandt_location_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:layout_alignParentRight="true" 
+            android:layout_centerVertical="true"
+            android:paddingRight = "20dp"
+            android:background="@color/transparent_bg"
+            android:src="@drawable/selector_location_btn"/>
+
+        <Button
+            android:id="@+id/xiaoyuandt_path_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:drawableLeft="@drawable/selector_path_btn"
+            android:drawablePadding="5dp"
+            android:text="路径" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

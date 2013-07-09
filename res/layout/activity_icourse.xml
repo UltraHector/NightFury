@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TabHost xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@android:id/tabhost"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical" >
+
+        <include
+            android:id="@+id/ischedule_title_bar"
+            layout="@layout/title_bar" />
+
+        <FrameLayout
+            android:id="@android:id/tabcontent"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1.0"
+            android:background="@drawable/home_bg" />
+
+        <TabWidget
+            android:id="@android:id/tabs"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.0"
+            android:visibility="gone" />
+
+        <RadioGroup
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:background="@drawable/tab_bar_bg"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <RadioButton
+                android:id="@+id/radio_btn1"
+                style="@style/tab_style"
+                android:drawableTop="@drawable/selector_icourse_tab_schedule_icon"
+                android:text="@string/icourse_schedule" />
+
+            <RadioButton
+                android:id="@+id/radio_btn2"
+                style="@style/tab_style"
+                android:drawableTop="@drawable/selector_icourse_tab_grade"
+                android:text="@string/icourse_grade_label" />
+
+            <RadioButton
+                android:id="@+id/radio_btn3"
+                style="@style/tab_style"
+                android:drawableTop="@drawable/selector_icourse_tab_table_icon"
+                android:text="@string/icourse_course_label" />
+
+            <RadioButton
+                android:id="@+id/radio_btn4"
+                style="@style/tab_style"
+                android:drawableTop="@drawable/selector_icourse_tab_exam_table_icon"
+                android:text="@string/icourse_exam_label" />
+        </RadioGroup>
+    </LinearLayout>
+
+</TabHost>

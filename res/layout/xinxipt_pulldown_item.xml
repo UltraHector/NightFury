@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/selector_news_item_bg"
+    android:gravity="center_vertical"
+    android:minHeight="?android:attr/listPreferredItemHeight"
+    android:padding="6dp"
+    android:paddingLeft="6dip" >
+
+    <TextView
+        android:id="@+id/xinxipt_title_textview"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="6dip"
+        android:layout_marginRight="12dp"
+        android:text="2013年暨南大学本科生出国（境）交换选拔综合面试的通知"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/xinxipt_news_type_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/xinxipt_title_textview"
+        android:paddingLeft="10dip"
+        android:text="教务处"
+        android:textSize="15sp"
+        android:textStyle="italic" />
+
+    <TextView
+        android:id="@+id/xinxipt_news_date_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="12dp"
+        android:layout_below="@+id/xinxipt_title_textview"
+        android:text="2012-12-21"
+        android:textSize="15sp"
+        android:textStyle="italic" />
+    
+    <ImageView 
+        android:src="@drawable/index_arrow"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:contentDescription="@string/image_description"
+        />
+
+</RelativeLayout>

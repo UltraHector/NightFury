@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="40dp"
+    android:gravity="center"
+    android:paddingBottom="2dip"
+    android:paddingLeft="3dip"
+    android:paddingRight="3dip" 
+    android:background="@drawable/icourse_score_item_bg"
+    >
+<!--     android:background="@color/background" -->
+
+    <TextView
+        android:id="@+id/ischedule_score_item_coursename"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@+id/ischedule_score_item_status"
+        android:drawableRight="@drawable/icourse_score_item_divider"
+        android:gravity="center"
+        android:text="@string/icourse_course_name"
+        android:textSize="18sp" />
+    
+    
+    <TextView
+        android:id="@+id/ischedule_score_item_status"
+        android:layout_width="45dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_toLeftOf="@+id/ischedule_score_item_creditpoints"
+        android:drawableRight="@drawable/icourse_score_item_divider"
+        android:text="@string/icourse_status"
+        android:textSize="18sp" />
+    
+
+    <TextView 
+        android:id="@+id/ischedule_score_item_creditpoints"
+        android:layout_width="52dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_toLeftOf="@+id/ischedule_score_item_score"
+        android:drawableRight="@drawable/icourse_score_item_divider"
+        android:text="@string/icourse_credit_point"
+        android:textSize="18sp"/>
+    
+    <TextView
+        android:id="@+id/ischedule_score_item_score"
+        android:layout_width="52dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_alignParentRight="true"
+        android:drawableRight="@drawable/icourse_score_item_divider"
+        android:text="@string/icourse_grade"
+        android:textSize="18sp"
+        android:textStyle="italic|bold" />
+
+</RelativeLayout>

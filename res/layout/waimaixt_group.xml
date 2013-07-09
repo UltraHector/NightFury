@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/waimaixt_groups_bg"
+    android:orientation="horizontal" >
+
+    <!-- android:background="@drawable/bg_restaurant_group1" -->
+
+    <TextView
+        android:id="@+id/waimaixt_group_textview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="10dp"
+        android:paddingLeft="40dp"
+        android:paddingTop="10dp"
+        android:textSize="20sp" />
+
+</LinearLayout>

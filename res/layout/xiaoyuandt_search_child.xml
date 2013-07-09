@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="4dip"
+    android:paddingLeft="12dip"
+    android:paddingRight="12dip" 
+    android:background="@drawable/selector_restaurant_item_bg"
+    >
+
+    <TextView 
+        android:id="@+id/xiaoyuandt_building_tv"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:text="图书馆"
+        android:textSize="21sp"
+        />
+    
+
+</RelativeLayout>

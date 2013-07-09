@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item name="bnt_back_background_pressed" type="drawable">@color/titlebar_btn_bg</item>
+    <item name="bnt_back_background" type="drawable">@color/transparent_bg</item>
+    <item name="transparent_bg" type="drawable">@color/transparent_bg</item>
+    <item name="bnt_back_background_focused" type="drawable">@color/titlebar_btn_bg</item>
+    <item name="home_item01_bg" type="drawable">#803399ff</item>
+    <item name="home_item02_bg" type="drawable">#3399ff</item>
+
+    <color name="ischedule_score_title">@color/blue</color>
+    <color name="titlebar_btn_bg">@color/orange</color>
+    <color name="transparent_bg">#00000000</color>
+    <color name="background">#f8f8f8</color>
+    <color name="white">#FFFFFF</color>
+ <!-- 白色 -->
+    <color name="slightblue">#ABD6E0</color>
+    <color name="yellow">#FFFF00</color>
+ <!-- 黄色 -->
+    <color name="gold">#FFD700</color>
+ <!-- 金色 -->
+    <color name="pink">#FFC0CB</color>
+ <!-- 粉红色 -->
+    <color name="lightpink">#FFB6C1</color>
+ <!-- 亮粉红色 -->
+    <color name="orange">#FFA500</color>
+ <!-- 橙色 -->
+    <color name="red">#FF0000</color>
+ <!-- 红色 -->
+    <color name="lightblue">#ADD8E6</color>
+ <!-- 亮蓝色 -->
+    <color name="lightgreen">#90EE90</color>
+ <!-- 亮绿色 -->
+    <color name="blueviolet">#8A2BE2</color>
+ <!-- 紫罗兰蓝色 -->
+    <color name="lightskyblue">#87CEFA</color>
+ <!-- 亮天蓝色 -->
+    <color name="skyblue">#87CEEB</color>
+ <!-- 天蓝色 -->
+    <color name="purple">#800080</color>
+ <!-- 紫色 -->
+    <color name="cyan">#00FFFF</color>
+ <!-- 青色 -->
+    <color name="green">#008000</color>
+ <!-- 绿色 -->
+    <color name="darkgreen">#006400</color>
+ <!-- 暗绿色 -->
+    <color name="blue">#0000FF</color>
+ <!-- 蓝色 -->
+    <color name="darkblue">#00008B</color>
+ <!-- 暗蓝色 -->
+    <color name="navy">#000080</color>
+ <!-- 海军色 -->
+    <color name="black">#000000</color>
+ <!-- 黑色 -->
+
+</resources>

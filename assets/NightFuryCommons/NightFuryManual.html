@@ -1,0 +1,172 @@
+<html>
+	<head>
+	<html>
+	<head>
+	</head>
+	  <meta charset="UTF-8" />
+	  <style>
+	  ul#list-nav {
+		list-style: none;
+		margin: 5px;
+		padding: 0;
+		text-align:center;
+		}	
+		ul#list-nav li {
+			display: inline
+		}	
+		ul#list-nav li a {
+			text-decoration: none;
+			padding: 2px 0;
+			text-align:center;
+			text-align: center;
+			border-left: 1px solid #fff;
+		}
+	  </style>
+	<head>
+	<body>
+	    <ul id="list-nav">
+			<li><a id="aboutHebeLink"  style="background:white; color:black;" href="#" onclick="switchToAboutMe()">关于Hebe</a></li>
+			<li><a id="manualLink" style="background:green; color:#eee;" href="#" onclick="switchToManual()">使用手册</a></li>
+			<li><a id="moreFuncLink" style="background:green; color:#eee;" href="#" onclick="switchToMoreFunc()">更多精彩</a></li>
+		</ul>
+		<div id="manual" style="display:none;">
+			<p>掌上暨大（Hebe）Version 1.0 作为首个校园软件版本，功能较为简单。
+			主要功能分为：信息平台，校园地图，外卖系统，i 课程和图书馆。首次
+			使用Hebe软件会自动从服务器下载相关数据。如果联网失败，Hebe会加载系统发布时
+			内置数据库。其中的信息可能已经过时，可以再联网之后手动更新。</p>
+			<ul style="list-style-type:circle;">
+		     <li>
+			   <h4>信息平台</h4>
+			   更新信息需要使用Wifi。打开信息平台，初次使用会从服务器加载新闻信息。
+			   点击<b>新闻标题</b>可以看到详细新新闻内容。点击题目栏<b>信息平台</b>
+			   可以分类下拉框。选择分类可以单独查看分类的新闻内容。
+			 </li>
+			 <li>
+			   <h4>校园地图</h4>
+			 </li>
+			 <li>
+			   <h4>外卖系统</h4>
+			   打开外卖系统，选择<b>全部餐馆</b>,可以看到所有数据库中的饭馆信息。长按<b>餐馆名称</b>可以
+			   显示加入<b>收藏夹</b>选项和订餐选项。单击餐馆名称可显示该餐馆提供的菜系详细信息。点击“一键订餐”，
+			   Hebe会帮您拨通餐馆的电话。 选中收藏夹的餐馆名字长按可以显示<b>移出收藏夹</b>选项。
+			 </li>
+			 <li>
+			   <h4>i 课程</h4>
+			   首次使用i课程系统会弹出输入<b>教务处</b>账号密码对话框。输入教务处一体化管理系统的
+			   账号密码，Hebe会帮您下载课程表和考试表（Version 1.0只支持本学期的课程信息）。点击<b>查询成绩</b>
+			   可以查询本学期的考试成绩。
+			 </li>
+			 <li>
+			   <h4>图书馆</h4>
+			   图书馆在第一版本中仅仅作为一个窗口链接到暨大图书馆首页。
+			 </li>
+		   </ul>
+		   <p>根据服务条款，Hebe对教务处的密码账号信息绝对保密。客户端不会向服务器发送任何有关个人密码信息。</p>
+		   
+		</div>
+		<div id="aboutHebe">
+			<p>掌上暨大（English Release Name: Hebe）,是一款校园手机应用软件。首期版本支持Android操作系统的
+			智能机。后期版本会逐渐支持IPhone系列手机。</p>
+			 <ul style="list-style-type:circle;">
+		     <li>
+			   <h4>Hebe来源</h4>
+			   Hebe是古希腊神话中宙斯和赫拉女儿，象征着青春快乐。以Hebe命名祝愿暨大的同学，保持一颗年轻与快乐
+			   的心。
+			 </li>
+			 <li>
+			   <h4>计算机思维</h4>
+			   计算机已经渗透到生活的方方面面。所谓计算机思维是指运用计算机最大限度的服务于人的思维。
+			   偌大的暨大，两万多名师生；一款优秀的手机应用软件可以成为一个服务的平台，集成一切可以
+			   方便人们生活的功能，必将为广大师生带来暨大的生活便利。
+			 </li>
+			 <li>
+			   <h4>服务暨大</h4>
+			   惶惶人生路，暨大给了我们太多太多。一路走来，有太多的美好回忆定格在了这座美丽的校园。
+			   大四临近毕业，秉承“发展暨大计算机科学，服务暨南人”的宗旨，愿所有暨南人都能关注暨大建设，
+			   努力为暨大的发展做出贡献。
+			 </li>
+		   </ul>
+		   	<p>Hebe Version 1.0 的开发完全由暨大信科院计算机系学生完成。<b>团队成员</b>：福尔魔光（任旭光），李玉滔，吴国锦。
+			后期版本中我们热情欢迎您的参与。具体详情请登陆掌上暨大PC平台:“www.jnucs.net/HebeServer”.
+			点击<b>加入我们</b>.</p>
+		</div>
+		<div id="moreFunc" style="display:none;">
+		   <p>由于Version1.0 开发时间有限，很多精彩功能没有在Version 1.0中呈现。后期版本中将为您一一呈现</p>
+		   <ul style="list-style-type:circle; ">
+		     <li>
+			   <h4>智能震机系统</h4>
+			    您的手机是否常年震机，为了上课时间避免调皮的铃声？智能真机系统将保证您上课时间即使
+				忘了开震机，铃声也不会出来作怪。
+			 </li>
+			 <li>
+			   <h4>校园黄页</h4>
+			    您记得学校学籍科的电话号码吗？ 您知道学校保卫处的联系方式吗？ 校园黄页让学校各部门
+				信息尽在掌握。
+			 </li>
+			 <li>
+			   <h4>暨大交流</h4>
+			    即使有QQ，您能发一条消息让所有暨大学生都知道吗？暨大交流将被研发为一个暨大交流的平台
+				无论是组团踢足球，组团逛街看电影。一条消息全暨大都能知晓，您的周末不在寂寞。
+			 </li>
+		   </ul>
+		   <p> 热情的我们服务热心的你，Hebe作为高融合的校园软件，将最大力度的融合一切能为您服务的
+				功能。如果您有更过的Idea，别忘了告诉我们啊。登陆掌上暨大PC平台:“www.jnucs.net/HebeServer”.
+				点击“<b>参与维护-->新功能推介</b>”，或许您今日的想法将会是掌上暨大明天的一个现实。
+		   </p>
+		</div>
+		<script>
+			function switchToAboutMe(){
+			  var aboutHebe =document.getElementById("aboutHebe");
+			  var manual =document.getElementById("manual");
+			  var moreFunc =document.getElementById("moreFunc");
+			  var aboutMeLink = document.getElementById("aboutHebeLink");
+			  var manualLink = document.getElementById("manualLink");
+			  var moreFuncLink = document.getElementById("moreFuncLink");
+			  aboutHebe.style.display = 'block';
+			  manual.style.display = 'none';
+			  moreFunc.style.display = 'none';  
+			  aboutMeLink.style.color ='black';  
+			  aboutMeLink.style.background ='white';
+			  manualLink.style.color ='#eee';
+			  manualLink.style.background ='green';
+			  moreFuncLink.style.color ='#eee';
+			  moreFuncLink.style.background ='green';
+			}
+			function switchToMoreFunc(){
+			  var aboutHebe =document.getElementById("aboutHebe");
+			  var manual =document.getElementById("manual");
+			  var moreFunc =document.getElementById("moreFunc");
+			  var aboutMeLink = document.getElementById("aboutHebeLink");
+			  var manualLink = document.getElementById("manualLink");
+			  var moreFuncLink = document.getElementById("moreFuncLink");
+			  aboutHebe.style.display = 'none';
+			  manual.style.display = 'none';
+			  moreFunc.style.display = 'block';
+			  aboutMeLink.style.color ="#eee";  
+			  aboutMeLink.style.background ='green';
+			  manualLink.style.color ='#eee';
+			  manualLink.style.background ='green';
+			  moreFuncLink.style.color ='black';
+			  moreFuncLink.style.background ='white';
+			}
+			function switchToManual(){
+			  var aboutHebe =document.getElementById("aboutHebe");
+			  var manual =document.getElementById("manual");
+			  var moreFunc =document.getElementById("moreFunc");
+			  var aboutMeLink = document.getElementById("aboutHebeLink");
+			  var manualLink = document.getElementById("manualLink");
+			  var moreFuncLink = document.getElementById("moreFuncLink");
+			  aboutHebe.style.display = 'none';
+			  manual.style.display = 'block';
+			  moreFunc.style.display = 'none';
+			  aboutMeLink.style.color ="#eee";  
+			  aboutMeLink.style.background ='green';
+			  manualLink.style.color ='black';
+			  manualLink.style.background ='white';
+			  moreFuncLink.style.color ='#eee';
+			  moreFuncLink.style.background ='green';
+			}
+		</script>
+	<body>
+	
+</html>

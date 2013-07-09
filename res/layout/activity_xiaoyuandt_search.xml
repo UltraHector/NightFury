@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/main_background"
+    android:orientation="vertical" >
+
+    <include layout="@layout/title_bar" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp" >
+
+        <AutoCompleteTextView
+            android:id="@+id/xiaoyuandt_search_textview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_toLeftOf="@+id/xiaoyuandt_search_confirm"
+            android:drawableLeft="@drawable/xiaoyuandt_ic_btn_search"
+            android:hint="请输入地点..."
+            android:textColor="@color/black" />
+
+        <Button
+            android:id="@+id/xiaoyuandt_search_confirm"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:drawableLeft="@drawable/selector_xiaoyuandt_search_btn"
+            android:text="@string/search" />
+    </RelativeLayout>
+
+    <ExpandableListView
+        android:id="@+id/xiaoyuandt_search_expandablelistview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:cacheColorHint="#00000000"
+        android:childDivider="@drawable/xiaoyuandt_search_item_divider"
+        android:divider="@drawable/xiaoyuandt_search_item_divider"
+        android:drawSelectorOnTop="false" />
+
+</LinearLayout>

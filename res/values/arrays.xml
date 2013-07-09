@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="functions_name">
+        <item>信息平台</item>
+        <item>校园地图</item>
+        <item>i课程</item>
+        <item>外卖系统</item>
+        <item>Hebe手册</item>
+        <item>图书馆</item>
+    </string-array>
+
+</resources>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="40dp"
+    android:gravity="center_vertical"
+    android:paddingBottom="4dip"
+    android:paddingLeft="10dip"
+    android:paddingRight="10dip" 
+    >
+<!--     android:background="@color/background" -->
+
+    <TextView
+        android:id="@+id/waimaixt_meal_item_name_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="2dp"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="xxx菜"
+        android:textSize="21sp" />
+
+    <TextView
+        android:id="@+id/waimaixt_meal_item_price_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:text="10元"
+        android:textSize="19sp" />
+
+</RelativeLayout>

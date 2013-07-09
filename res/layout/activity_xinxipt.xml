@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/home_bg"
+    android:orientation="vertical"
+   	>
+    
+    <include layout="@layout/title_bar"/>
+    
+    
+    <com.TroyEmpire.NightFury.UI.Entity.PullDownView
+    	android:id="@+id/xinxipt_pull_down_view"
+    	android:layout_width="fill_parent"
+    	android:layout_height="fill_parent"
+    	android:background="@android:color/white">
+	</com.TroyEmpire.NightFury.UI.Entity.PullDownView>
+    
+</LinearLayout>
