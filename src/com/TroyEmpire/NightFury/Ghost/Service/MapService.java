@@ -189,7 +189,7 @@ public class MapService implements IMapService {
 		String[] columns = { DBConstant.TABLE_CELL_FIELD_ID,
 				DBConstant.TABLE_CELL_FIELD_NAME,
 				DBConstant.TABLE_CELL_FIELD_BUILDINGID };
-		String selection = "name like \'" + pattern + "%\'";
+		String selection = "name like \'%" + pattern + "%\'";
 		Cursor cursor = db.query(DBConstant.TABLE_CELL, columns, selection,
 				null, null, null, null);
 
@@ -199,7 +199,7 @@ public class MapService implements IMapService {
 
 		
 		int i = 0;
-	
+
 		while (cursor.moveToNext()) {
 			// int id =
 			// cursor.getInt(cursor.getColumnIndex(DBConstant.TABLE_CELL_FIELD_ID));

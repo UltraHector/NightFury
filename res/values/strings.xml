@@ -17,7 +17,7 @@
 
     <!-- 校园地图模块 -->
     <string name="xiaoyuandt_label">校园地图</string>
-    <string name="path_source">起点:</string>
+    <string name="path_source">起点：</string>
     <string name="path_dest">终点：</string>
     <string name="path">路径</string>
     <string name="search">搜索</string>

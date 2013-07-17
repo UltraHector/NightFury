@@ -197,7 +197,8 @@ public class MainActivity extends Activity implements OnClickListener {
 			IOUtils.copy(in_rest, out_rest);
 			IOUtils.copy(in_map, out_map);
 			IOUtils.copy(in_yellowPage, out_yellowPage);
-		} catch (IOException e) {
+		} catch (Exception e) {
+			e.printStackTrace();
 		}
 	}
 

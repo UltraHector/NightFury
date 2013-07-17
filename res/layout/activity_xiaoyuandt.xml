@@ -23,26 +23,29 @@
         android:paddingLeft="10dp"
         android:paddingRight="10dp"
         android:background="@drawable/tab_bar_bg" >
+        
+        
+<!--     引用地图的地点定位和建筑搜索功能     -->
+        
+<!--         <Button -->
+<!--             android:id="@+id/xiaoyuandt_search_btn" -->
+<!--             android:layout_width="wrap_content" -->
+<!--             android:layout_height="48dp" -->
+<!--             android:layout_centerVertical="true" -->
+<!--             android:paddingLeft= "20dp" -->
+<!--             android:drawableLeft="@drawable/selector_xiaoyuandt_search_btn" -->
+<!--             android:drawablePadding="5dp" -->
+<!--             android:text="搜索" /> -->
 
-        <Button
-            android:id="@+id/xiaoyuandt_search_btn"
-            android:layout_width="wrap_content"
-            android:layout_height="48dp"
-            android:layout_centerVertical="true"
-            android:paddingLeft= "20dp"
-            android:drawableLeft="@drawable/selector_xiaoyuandt_search_btn"
-            android:drawablePadding="5dp"
-            android:text="搜索" />
-
-        <ImageButton
-            android:id="@+id/xiaoyuandt_location_btn"
-            android:layout_width="wrap_content"
-            android:layout_height="48dp"
-            android:layout_alignParentRight="true" 
-            android:layout_centerVertical="true"
-            android:paddingRight = "20dp"
-            android:background="@color/transparent_bg"
-            android:src="@drawable/selector_location_btn"/>
+<!--         <ImageButton -->
+<!--             android:id="@+id/xiaoyuandt_location_btn" -->
+<!--             android:layout_width="wrap_content" -->
+<!--             android:layout_height="48dp" -->
+<!--             android:layout_alignParentRight="true"  -->
+<!--             android:layout_centerVertical="true" -->
+<!--             android:paddingRight = "20dp" -->
+<!--             android:background="@color/transparent_bg" -->
+<!--             android:src="@drawable/selector_location_btn"/> -->
 
         <Button
             android:id="@+id/xiaoyuandt_path_btn"

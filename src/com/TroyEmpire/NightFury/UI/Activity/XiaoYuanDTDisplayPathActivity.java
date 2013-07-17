@@ -6,7 +6,6 @@ import com.TroyEmpire.NightFury.UI.ViewHolder.XiaoYuanDTWebView;
 
 import android.annotation.SuppressLint;
 import android.app.Activity;
-import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -22,7 +21,7 @@ public class XiaoYuanDTDisplayPathActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_xiaoyuandt_display_path);
 		TextView tvTitleBar = (TextView) findViewById(R.id.title_text);
-		tvTitleBar.setText("���·��");
+		tvTitleBar.setText("建议路径");
 		Building sourceBuilding = (Building)getIntent().getExtras().get("sourceBuilding");
 		Building destBuilding = (Building)getIntent().getExtras().get("destBuilding");
 		xiaoYuanDTWebView = (XiaoYuanDTWebView) findViewById(R.id.xiaoyuandt_display_path_webview);
@@ -33,12 +32,10 @@ public class XiaoYuanDTDisplayPathActivity extends Activity {
 		xiaoYuanDTWebView.disPlayShortestPath(sourceBuilding.getPathDotId(), destBuilding.getPathDotId());
 	}
 	
-	// ʵ�ֱ�������Home��
 	public void btnHomeOnClick(View v) {
 		startActivity(new Intent(this, MainActivity.class));
 	}
 
-	// ʵ�ֱ������ķ��ؼ�
 	public void btnBackOnClick(View v) {
 		finish();
 	}

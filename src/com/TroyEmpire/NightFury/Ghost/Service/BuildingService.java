@@ -35,7 +35,8 @@ public class BuildingService implements IBuildingService {
 				+ " \"" + cellName + "\"";
 
 		Cell cell = cellDBManager.findOne(condition);
-
+		if(cell == null)
+			return null;
 		long buildingId = cell.getBuildingId();
 		condition = " where " + DBConstant.TABLE_BUILDING_FIELD_ID + " = "
 				+ buildingId;

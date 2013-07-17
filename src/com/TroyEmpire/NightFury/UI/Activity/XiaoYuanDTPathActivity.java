@@ -1,7 +1,5 @@
 package com.TroyEmpire.NightFury.UI.Activity;
 
-
-
 import com.TroyEmpire.NightFury.Constant.Constant;
 import com.TroyEmpire.NightFury.Entity.Building;
 import com.TroyEmpire.NightFury.Ghost.IService.IBuildingService;
@@ -14,6 +12,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.ArrayAdapter;
@@ -33,7 +32,6 @@ public class XiaoYuanDTPathActivity extends Activity implements OnClickListener 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setTheme(android.R.style.Theme);
 		setContentView(R.layout.activity_xiaoyuandt_path);
 
 		TextView titleTV = (TextView) findViewById(R.id.title_text);
@@ -70,7 +68,8 @@ public class XiaoYuanDTPathActivity extends Activity implements OnClickListener 
 				adapter.clear();
 				for (String suggestion : mapService.getSuggestPlaceName(s
 						.toString())) {
-					adapter.add(suggestion);
+					//TODO ? Autocomplete 只显示首字母匹配的字符串而不是含有关键词的字符串
+					adapter.add(s.toString() + ":" + suggestion);
 				}
 			}
 		};
@@ -78,14 +77,14 @@ public class XiaoYuanDTPathActivity extends Activity implements OnClickListener 
 		destTextView.addTextChangedListener(textChecker);
 	}
 
-	// ʵ�ֱ�������Home��
+	// 实现标题栏的Home键
 	public void btnHomeOnClick(View v) {
 		startActivity(new Intent(this, MainActivity.class));
 	}
 
-	// ʵ�ֱ������ķ��ؼ�
+	// 实现标题栏的返回键
 	public void btnBackOnClick(View v) {
-		finish();
+		this.finish();
 	}
 
 	// submit search source and destinations
@@ -95,19 +94,22 @@ public class XiaoYuanDTPathActivity extends Activity implements OnClickListener 
 		case R.id.xiaoyuandt_path_submit_button: {
 			String sourceName = sourceTextView.getText().toString();
 			String destName = destTextView.getText().toString();
+			sourceName = sourceName.substring(sourceName.indexOf(":") + 1);
+			destName = destName.substring(destName.indexOf(":") + 1);
+			//去掉引导关键词的
 			Building sourceBuilding = buildingService
 					.getBuildingByCellName(sourceName);
 			Building destBuilding = buildingService
 					.getBuildingByCellName(destName);
-			if (sourceBuilding.getId() == 0 && destBuilding.getId() == 0) {
-				noticeTextView.setText("δ֪����" + sourceName + "\nδ֪����"
+			if (sourceBuilding == null && destBuilding == null) {
+				noticeTextView.setText("未知起点：" + sourceName + "\n未知终点："
 						+ destName);
 				return;
-			} else if (sourceBuilding.getId() == 0) {
-				noticeTextView.setText("δ֪����" + sourceName);
+			} else if (sourceBuilding == null) {
+				noticeTextView.setText("未知起点：" + sourceName);
 				return;
-			} else if (destBuilding.getId() == 0) {
-				noticeTextView.setText("δ֪����" + destName);
+			} else if (destBuilding == null) {
+				noticeTextView.setText("未知终点：" + destName);
 				return;
 			}
 			Intent displayPathIntent = new Intent(this,

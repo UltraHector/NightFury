@@ -98,7 +98,7 @@ function printLine(arg) {
 	var str = new String("");
 	str = corr_x[0] + " " + corr_y[0] + " " + corr_x[1] + " " + corr_y[1];
 
-	document.getElementById("shit").innerHTML = str;
+//	document.getElementById("shit").innerHTML = str;
 
 	var flightPlanCoordinates = [
 			new google.maps.LatLng(parseFloat(corr_x[0]), parseFloat(corr_y[0])),
@@ -141,7 +141,7 @@ function addMarkerForSearch(arg) {
 
 	var jnu = "jnu";
 
-	document.getElementById("shit").innerHTML = str;
+//	document.getElementById("shit").innerHTML = str;
 
 	locationForSearch = new google.maps.LatLng(parseFloat(latitude),
 			parseFloat(longitude));
@@ -194,7 +194,7 @@ function addMarkerForPath(arg) {
 
 	var jnu = "jnu";
 
-	document.getElementById("shit").innerHTML = str;
+//	document.getElementById("shit").innerHTML = str;
 
 	locationForPathFrom = new google.maps.LatLng(parseFloat(latitudeFrom),
 			parseFloat(longitudeFrom));
@@ -427,13 +427,13 @@ function load() {
 		/*
 		 * var myVar = setTimeout(function() { alert("Hello") }, 3000);
 		 */
-		document.getElementById("shit").innerHTML = "Lat=" + lat + "; Lng="
-				+ lng;
+//		document.getElementById("shit").innerHTML = "Lat=" + lat + "; Lng="
+//				+ lng;
 
 		// call android/java from js
 		var arg = lat.toString() + "#" + lng.toString()+"#"+ isInAddMarkerForPathMode;
 
-		document.getElementById("shit").innerHTML = arg;
+//		document.getElementById("shit").innerHTML = arg;
 		window.android.callAndroid(arg);
 		infoWindowForSearch.close();
 		// infoWindowForPathFrom.close();

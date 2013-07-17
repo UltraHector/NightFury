@@ -1,6 +1,5 @@
 package com.TroyEmpire.NightFury.Ghost.Service;
 
-import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.Reader;
@@ -90,7 +89,7 @@ public class InformationPlatformSerivce implements IInformationPlatformService {
 				newsList.add(news);
 			}
 			newsDbManager.saveAll(newsList);
-		} catch (IOException e) {
+		} catch (Exception e) {
 			e.printStackTrace();
 		}
 	}

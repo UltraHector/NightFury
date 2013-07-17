@@ -21,6 +21,7 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.CheckBox;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class PrefsActivity extends FragmentActivity implements OnClickListener {
 
@@ -91,13 +92,21 @@ public class PrefsActivity extends FragmentActivity implements OnClickListener {
 		case R.id.id_enable_smart_viberate_checkbox:
 			Log.i(TAG, "切换智能真机系统状态");
 			CheckBox enableSmartViberateBox = (CheckBox) findViewById(R.id.id_enable_smart_viberate_checkbox);
-			if (enableSmartViberateBox.isChecked() == true)
+			if (enableSmartViberateBox.isChecked() == true){
 				smartPhoneViberateService
 						.startSmartPhoneViberateService(iScheduleService
 								.getDayCoursePhoneModeTimeUnits(Util
 										.getWeekday()));
-			else
+				Toast.makeText(this,
+						"打开智能振机系统",
+						Toast.LENGTH_SHORT).show();
+			}
+			else{
 				smartPhoneViberateService.stopSmartPhoneViberateService();
+				Toast.makeText(this,
+						"关闭智能振机系统",
+						Toast.LENGTH_SHORT).show();
+			}
 			break;
 
 		case R.id.id_enable_smart_viberate_textview:
@@ -114,10 +123,16 @@ public class PrefsActivity extends FragmentActivity implements OnClickListener {
 			userInfoDialog.show(getSupportFragmentManager(), "getUserJwcInfo");
 			break;
 		case R.id.id_update_map_data:
-			initiateDataService.initiateMapData(1);
+			//initiateDataService.initiateMapData(1);
+			Toast.makeText(this,
+					"该版本尚未实现该功能",
+					Toast.LENGTH_SHORT).show();
 			break;
 		case R.id.id_update_restaurant_data:
-			initiateDataService.initiateRestaurantData(1);
+			//initiateDataService.initiateRestaurantData(1);
+			Toast.makeText(this,
+					"该版本尚未实现该功能",
+					Toast.LENGTH_SHORT).show();
 			break;
 		}
 
