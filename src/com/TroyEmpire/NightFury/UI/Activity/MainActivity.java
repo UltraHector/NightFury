@@ -1,6 +1,7 @@
 package com.TroyEmpire.NightFury.UI.Activity;
 
 import java.io.File;
+import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
@@ -11,6 +12,7 @@ import com.TroyEmpire.NightFury.Constant.Constant;
 import com.TroyEmpire.NightFury.Ghost.IService.IInitiateDataService;
 import com.TroyEmpire.NightFury.Ghost.Service.InitiateDataService;
 import com.TroyEmpire.NightFury.Util.NightFuryCommons;
+import com.TroyEmpire.NightFury.Util.Util;
 
 import android.app.Activity;
 import android.app.ProgressDialog;
@@ -30,7 +32,6 @@ public class MainActivity extends Activity implements OnClickListener {
 	private IInitiateDataService initDataService = new InitiateDataService();
 
 	// 用于测试服务是否打开的定时器
-
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -112,11 +113,13 @@ public class MainActivity extends Activity implements OnClickListener {
 			Intent it = new Intent(Intent.ACTION_SEND);
 			it.setType("text/plain");
 			it.putExtra(Intent.EXTRA_SUBJECT, "分享");
-			it.putExtra(Intent.EXTRA_TEXT,"掌上暨大无比强大，值得一试哦，下载地址：http://www.baidu.com");
+			it.putExtra(Intent.EXTRA_TEXT,
+					"掌上暨大无比强大，值得一试哦，下载地址：http://www.baidu.com");
 			startActivity(Intent.createChooser(it, "选择分享方式"));
 			break;
 		}
 	}
+
 	/**
 	 * @param campusId
 	 * @return if the db file not exists, create folder structure and return
@@ -136,12 +139,16 @@ public class MainActivity extends Activity implements OnClickListener {
 		String dbYellowPagePath = Constant.NIGHTFURY_STORAGE_ROOT
 				+ "/YellowPage/Campus_" + campusId
 				+ "_YellowPage/YellowPageDB/";
+		String restaurantLogoPath = Constant.NIGHTFURY_STORAGE_ROOT
+				+ "/Restaurant/Campus_" + campusId
+				+ "_Restaurant/RestaurantLogo";
 
 		File dbRestFolderFile = new File(dbRestFolderPath);
 		File dbMapFolderFile = new File(dbMapFolderPath);
 		File imageMapFolderFile = new File(imageMapFolderPath);
 		File logoRestFolderFile = new File(logoRestFolderPath);
 		File dbYellowPageFolderFile = new File(dbYellowPagePath);
+		File restaurantLogoFolder = new File(restaurantLogoPath);
 
 		if (!dbRestFolderFile.exists()) {
 			dbRestFolderFile.mkdirs();
@@ -163,6 +170,10 @@ public class MainActivity extends Activity implements OnClickListener {
 			dbYellowPageFolderFile.mkdirs();
 			yesOrNo = true;
 		}
+		if (!restaurantLogoFolder.exists()) {
+			restaurantLogoFolder.mkdirs();
+			yesOrNo = true;
+		}
 		return yesOrNo;
 	}
 
@@ -178,11 +189,16 @@ public class MainActivity extends Activity implements OnClickListener {
 					+ "/YellowPage/Campus_" + campusId
 					+ "_YellowPage/YellowPageDB/"
 					+ Constant.YELLOWPAGE_DB_FILE_NAME;
+			String restaurantPath = Constant.NIGHTFURY_STORAGE_ROOT
+					+ "/Restaurant/Campus_" + campusId + "_Restaurant";
+
 			File restFile = new File(dbRestPath);
 			restFile.createNewFile();
 			File mapFile = new File(dbMapPath);
 			mapFile.createNewFile();
 			File yellowPageFile = new File(dbYellowPagePath);
+			File restaurantLogoZip = new File(restaurantPath
+					+ "/RestaurantLogo.zip");
 
 			InputStream in_rest = getAssets().open(
 					Constant.NIGHTFURY_CLIENT_DB_DATA + "/Restaurant.db");
@@ -190,10 +206,19 @@ public class MainActivity extends Activity implements OnClickListener {
 					Constant.NIGHTFURY_CLIENT_DB_DATA + "/Map.db");
 			InputStream in_yellowPage = getAssets().open(
 					Constant.NIGHTFURY_CLIENT_DB_DATA + "/YellowPage.db");
+			InputStream rest_Logo_Zip = getAssets().open(
+					Constant.NIGHTFURY_CLIENT_DB_DATA + "/RestaurantLogo.zip");
 
+			OutputStream out_rest_logo = new FileOutputStream(restaurantLogoZip);
 			OutputStream out_rest = new FileOutputStream(restFile);
 			OutputStream out_map = new FileOutputStream(mapFile);
 			OutputStream out_yellowPage = new FileOutputStream(yellowPageFile);
+			IOUtils.copy(rest_Logo_Zip, out_rest_logo);
+			// Unzip the logo files
+			Util.unzipFile(restaurantPath + "/RestaurantLogo.zip",
+					restaurantPath);
+			restaurantLogoZip.delete();// destroy itself
+			
 			IOUtils.copy(in_rest, out_rest);
 			IOUtils.copy(in_map, out_map);
 			IOUtils.copy(in_yellowPage, out_yellowPage);
@@ -214,8 +239,10 @@ public class MainActivity extends Activity implements OnClickListener {
 
 		@Override
 		protected Void doInBackground(Void... params) {
-			if ((whetherConnectToServer = NightFuryCommons
-					.checkWhetherCouldConnectToServer())) {
+			if (false) {
+				// V1.0掩盖了从服务器下载地图和餐馆信息
+				// if ((whetherConnectToServer = NightFuryCommons
+				// .checkWhetherCouldConnectToServer())) {
 				initDataService.initiateMapData(1);
 				initDataService.initiateRestaurantData(1);
 			} else {
@@ -232,9 +259,11 @@ public class MainActivity extends Activity implements OnClickListener {
 				Toast.makeText(MainActivity.this, "初始化数据成功", Toast.LENGTH_SHORT)
 						.show();
 			else
-				Toast.makeText(MainActivity.this,
-						"网络连接失败，初始化数据使用内置数据库。请及时手工更新", Toast.LENGTH_LONG)
-						.show();
+				;
+			// V1.0掩盖了从服务器下载地图和餐馆信息
+			// Toast.makeText(MainActivity.this,
+			// "网络连接失败，初始化数据使用内置数据库。请及时手工更新", Toast.LENGTH_LONG)
+			// .show();
 		};
 	}
 

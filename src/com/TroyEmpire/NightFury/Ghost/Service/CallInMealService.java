@@ -96,7 +96,7 @@ public class CallInMealService implements ICallInMealService {
 
 	@Override
 	public String getRestaurantLogoPath(long id) {
-		return Constant.NIGHTFURY_STORAGE_ROOT + "/Campus_" + this.campusId
+		return Constant.NIGHTFURY_STORAGE_ROOT + "/Restaurant/Campus_" + this.campusId
 				+ "_Restaurant/RestaurantLogo/" + id + ".jpg";
 	}
 
